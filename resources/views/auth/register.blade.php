@@ -38,6 +38,24 @@
                                 @enderror
                             </div>
                         </div>
+                        
+                        <div class="form-group row">
+                            <label for="university_id" class="col-md-4 col-form-label text-md-right">{{ __('University') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="university_id" class="custom-select">
+                                  @foreach($universities as $university)
+                                    <option value="{{ $university->id }}">{{ $university->name }}</option>
+                                  @endforeach
+                                </select>
+                                <!--<input id="university_id" type="text" class="form-control @error('university_id') is-invalid @enderror" name="university_id" value="{{ old('university_id') }}" required autocomplete="university_id" autofocus>-->
+                                @error('user.university_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
