@@ -22,4 +22,6 @@ Auth::routes([
 Route::get('/register', 'Auth\RegisterController@getRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@postRegistrationForm')->name('register');
 
+Route::get('/profile', 'ProfileController@showProfile');
+
 Route::get('/home', 'HomeController@index')->name('home');

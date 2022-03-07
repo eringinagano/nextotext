@@ -1,0 +1,43 @@
+.profile-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.profile-title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.profile-wrapper {
+    text-align: center;
+    margin: 60px auto;
+    width: 70%;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.profile-wrapper dl {
+    display: flex;
+    margin-top: 40px;
+}
+
+.profile-wrapper dt {
+    width: 50%;
+}
+
+.edit-btn {
+    padding: 7px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.show-textbooks {
+    margin-top: 35px;
+    text-align: right;
+    width: 95%;
+}
+
+.show-textbooks a {
+    margin-right: 10px;
+    cursor: pointer;
+}
