@@ -2,7 +2,7 @@
 @section('content')
 <div class="container post-container">
     <h2 class="post-title">教科書出品画面</h2>
-    <form action="/post" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('textbook.post') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="post-wrapper">
             <dl>
