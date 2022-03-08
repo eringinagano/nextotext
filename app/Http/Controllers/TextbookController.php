@@ -41,4 +41,8 @@ class TextbookController extends Controller
         return redirect()->route('profile');
         
     }
+    
+    public function showTextbooks(Textbook $textbook) {
+        return view('textbooks/index')->with(['textbooks' => $textbook->get()]);
+    }
 }

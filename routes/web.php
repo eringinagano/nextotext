@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes([
     'register' => false
@@ -26,6 +26,7 @@ Route::get('/profile', 'ProfileController@showProfile')->name('profile');
 Route::get('/profile/edit', 'ProfileController@showEditProfile')->name('profile.edit');
 Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
 
+Route::get('/', 'TextbookController@showTextbooks')->name('textbook.index');
 Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textbook.post');
 Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
 
