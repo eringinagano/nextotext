@@ -26,4 +26,6 @@ Route::get('/profile', 'ProfileController@showProfile')->name('profile');
 Route::get('/profile/edit', 'ProfileController@showEditProfile')->name('profile.edit');
 Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
 
+Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textbook.post');
+
 Route::get('/home', 'HomeController@index')->name('home');

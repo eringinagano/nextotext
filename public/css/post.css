@@ -1,0 +1,29 @@
+.post-container {
+    margin-top: 20px;
+}
+
+.post-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.post-wrapper {
+    margin: 40px auto 30px;
+    width: 45%;
+}
+
+.post-wrapper dt {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.btn-wrapper {
+    text-align: center;
+}
+
+.post-btn {
+    padding: 7px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
