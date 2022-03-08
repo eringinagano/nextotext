@@ -19,6 +19,19 @@ class ProfileController extends Controller
         return view('profiles/edit_profile')->with(['user' => Auth::user(), 'universities' => $university->get(), 'categories' => $category->get()]);
     }
     
+    public function editProfile(Request $request) {
+        $user = Auth::user();
+        
+        $user->categories()->sync($request['category_id']);
+        
+        $input_user = $request['user'];
+        $user->fill($input_user)->save();
+        
+        
+        return view('profiles/profile')->with('user', $user);
+        
+    }
+    
     
     
 }

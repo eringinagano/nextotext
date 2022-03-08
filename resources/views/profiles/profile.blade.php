@@ -20,7 +20,7 @@
             </dd>
         </dl> 
     </div>
-    <a href="/profile/edit" type="button" class="btn btn-success edit-btn">編集</a>
+    <a href="{{ route('profile.edit') }}" type="button" class="btn btn-success edit-btn">編集</a>
 </div>
 <div class="show-textbooks">
     <a>購入した教科書</a>

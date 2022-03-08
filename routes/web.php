@@ -22,7 +22,8 @@ Auth::routes([
 Route::get('/register', 'Auth\RegisterController@getRegistrationForm')->name('register');
 Route::post('/register', 'Auth\RegisterController@postRegistrationForm')->name('register');
 
-Route::get('/profile', 'ProfileController@showProfile');
-Route::get('/profile/edit', 'ProfileController@showEditProfile');
+Route::get('/profile', 'ProfileController@showProfile')->name('profile');
+Route::get('/profile/edit', 'ProfileController@showEditProfile')->name('profile.edit');
+Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
 
 Route::get('/home', 'HomeController@index')->name('home');
