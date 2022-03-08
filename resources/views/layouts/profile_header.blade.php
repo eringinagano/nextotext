@@ -60,7 +60,7 @@
                                 <a class="nav-link" href="">予約アイテム</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/profile">プロフィール</a>
+                                <a class="nav-link" href="{{ route('profile') }}">プロフィール</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"

@@ -2,7 +2,7 @@
 @section('content')
 <div class="container profile-container">
     <h2 class="profile-title">プロフィール編集画面</h2>
-    <form action="/profile/edit" method="POST">
+    <form action="{{ route('profile.edit') }}" method="POST">
         @csrf
         <div class="profile-wrapper">
             <dl>
