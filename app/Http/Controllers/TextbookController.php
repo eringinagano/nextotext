@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Category;
 use App\Author;
 use App\Textbook;
 use App\TextbookState;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -44,5 +46,34 @@ class TextbookController extends Controller
     
     public function showTextbooks(Textbook $textbook) {
         return view('textbooks/index')->with(['textbooks' => $textbook->get()]);
+    }
+    
+    public function showTextbookDetail(Textbook $textbook) {
+        $user_id = Auth::id();
+        $textbook_id =$textbook->id;
+        $user_infos = User::find($user_id);
+        
+        $favorite = false;
+        
+       foreach($user_infos->favoriteItems as $user_info) {
+            if($user_info['id'] === $textbook_id) {
+                $favorite = true;
+                break;
+            } else {
+                $favorite = false;
+            }
+        }
+        
+        $now = new Carbon();
+        $postdate = new Carbon($textbook->date_time);
+        $reservation = true;
+        
+        if($now < $postdate ) {
+            $reservation = true;
+        } else {
+            $reservation = false;
+        }
+        
+        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation]);
     }
 }

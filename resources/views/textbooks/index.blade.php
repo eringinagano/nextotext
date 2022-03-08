@@ -11,7 +11,7 @@
                   <p>タイトル：{{ $textbook->name }}</p>
                   <p>カテゴリー：{{ $textbook->category->name}}</p>
               </div>
-              <a href="/textbooks/{{ $textbook->id }}" class="btn btn-success index-btn">詳細をみる</a>
+              <a href="/textbook/{{ $textbook->id }}" class="btn btn-success index-btn">詳細をみる</a>
             </div>
         </li>
         @endforeach
