@@ -1,0 +1,34 @@
+.detail-container {
+    margin-top: 30px;
+}
+
+.detail-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.detail-wrapper {
+    margin-top: 50px;
+}
+
+.detail-wrapper ul {
+    display: flex;
+}
+
+.detail-wrapper li {
+    list-style: none;
+    width: 50%;
+}
+
+.detail-text p {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.detail-btn {
+    padding: 5px 20px;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
