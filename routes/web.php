@@ -31,5 +31,6 @@ Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textb
 Route::get('/textbook/{textbook}', 'TextbookController@showTextbookDetail')->name('textbook.detail');
 Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
 Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('textbook.favorite');
+Route::post('/textbook/{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('textbook.remove');
 
 Route::get('/home', 'HomeController@index')->name('home');
