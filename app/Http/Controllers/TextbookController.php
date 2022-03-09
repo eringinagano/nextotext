@@ -65,10 +65,10 @@ class TextbookController extends Controller
         }
         
         $now = new Carbon();
-        $postdate = new Carbon($textbook->date_time);
+        $startdate = new Carbon($textbook->date_time);
         $reservation = true;
         
-        if($now < $postdate ) {
+        if($now < $startdate ) {
             $reservation = true;
         } else {
             $reservation = false;
@@ -94,5 +94,13 @@ class TextbookController extends Controller
     public function showFavorites() {
         $user = Auth::user();
         return view('textbooks/favorites')->with(['user' => $user]);
+    }
+    
+    public function reserveTextbook(Textbook $textbook) {
+        $user_id = Auth::id();
+        
+        $textbook->isCheckDate($user_id);
+        
+        return redirect(route('textbook.index'));
     }
 }
