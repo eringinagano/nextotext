@@ -25,7 +25,11 @@
               </form>
             @endif
             @if($reservation)
+              @if($reserved)
+                <p class="reserved">この教科書は予約済みです</p>
+              @else
                 <a href="/textbook/{{ $textbook->id }}/reserve" class="btn btn-success detail-btn">予約する</a>
+              @endif
             @else
                 <a href="" class="btn btn-success detail-btn">受け取る</a>
               </form>
