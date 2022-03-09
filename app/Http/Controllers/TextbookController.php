@@ -83,4 +83,11 @@ class TextbookController extends Controller
 
         return redirect(route('textbook.index'));
     }
+    
+    public function removeFavoriteTextbook(Textbook $textbook) {
+        $user = Auth::user();
+        $user->favoriteTextbooks()->detach($textbook->id);
+
+        return redirect(route('textbook.index'));
+    }
 }

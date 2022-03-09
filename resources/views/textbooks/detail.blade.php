@@ -14,7 +14,7 @@
             <p>教科書の状態：{{ $textbook->textbook_state->name }}</p>
             <p>出品開始日：{{ $textbook->date_time }}</p>
             @if($favorite)
-              <form action="/textbook/{{ $textbook->id }}/delete" method="POST">
+              <form action="/textbook/{{ $textbook->id }}/remove" method="POST">
                 @csrf
                 <input type="submit" class="btn btn-primary detail-btn" value="お気に入りから削除"></a>
               </form>
