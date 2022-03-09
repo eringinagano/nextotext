@@ -90,4 +90,9 @@ class TextbookController extends Controller
 
         return redirect(route('textbook.index'));
     }
+    
+    public function showFavorites() {
+        $user = Auth::user();
+        return view('textbooks/favorites')->with(['user' => $user]);
+    }
 }
