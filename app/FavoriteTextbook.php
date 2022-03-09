@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class FavoriteItem extends Model
+class FavoriteTextbook extends Model
 {
     //
     protected $fillable = [
