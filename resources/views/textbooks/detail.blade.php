@@ -14,18 +14,18 @@
             <p>教科書の状態：{{ $textbook->textbook_state->name }}</p>
             <p>出品開始日：{{ $textbook->date_time }}</p>
             @if($favorite)
-              <form action="/textbooks/{{ $textbook->id }}/delete" method="POST">
+              <form action="/textbook/{{ $textbook->id }}/delete" method="POST">
                 @csrf
                 <input type="submit" class="btn btn-primary detail-btn" value="お気に入りから削除"></a>
               </form>
             @else  
-              <form action="/textbooks/{{ $textbook->id }}/favorite" method="POST">
+              <form action="/textbook/{{ $textbook->id }}/favorite" method="POST">
                 @csrf
                 <input type="submit" class="btn btn-primary detail-btn" value="お気に入りに登録"></a>
               </form>
             @endif
             @if($reservation)
-                <a href="/textbooks/{{ $textbook->id }}/reservation" class="btn btn-success detail-btn">予約する</a>
+                <a href="/textbook/{{ $textbook->id }}/reservation" class="btn btn-success detail-btn">予約する</a>
             @else
                 <a href="" class="btn btn-success detail-btn">受け取る</a>
               </form>

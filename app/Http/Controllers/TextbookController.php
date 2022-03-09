@@ -76,4 +76,11 @@ class TextbookController extends Controller
         
         return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation]);
     }
+    
+    public function addFavoriteTextbook(Textbook $textbook) {
+        $user = Auth::user();
+        $user->favoriteItems()->syncWithoutDetaching($textbook->id);
+
+        return redirect(route('textbook.index'));
+    }
 }
