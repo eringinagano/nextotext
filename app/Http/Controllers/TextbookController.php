@@ -40,7 +40,7 @@ class TextbookController extends Controller
             'date_time' => $date,
         ]);
         
-        return redirect()->route('profile');
+        return redirect(route('textbook.index'));
         
     }
     
