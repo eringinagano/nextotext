@@ -30,5 +30,6 @@ Route::get('/', 'TextbookController@showTextbooks')->name('textbook.index');
 Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textbook.post');
 Route::get('/textbook/{textbook}', 'TextbookController@showTextbookDetail')->name('textbook.detail');
 Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
+Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('textbook.favorite');
 
 Route::get('/home', 'HomeController@index')->name('home');
