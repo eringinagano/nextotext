@@ -103,4 +103,12 @@ class TextbookController extends Controller
         
         return redirect(route('textbook.index'));
     }
+    
+    public function showReservations() {
+        $user_id = Auth::id();
+        
+        $reservation_infos = Textbook::where('reservation_id', '=', $user_id)->get();
+        
+        return view('textbooks/reservations')->with(['reservation_infos' => $reservation_infos]);
+    }
 }
