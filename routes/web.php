@@ -29,6 +29,7 @@ Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edi
 Route::get('/', 'TextbookController@showTextbooks')->name('textbook.index');
 Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textbook.post');
 Route::get('/textbook/favorites', 'TextbookController@showFavorites')->name('textbook.favorites');
+Route::get('/textbook/reservations', 'TextbookController@showReservations')->name('textbook.reservations');
 Route::get('/textbook/{textbook}/reserve', 'TextbookController@reserveTextbook')->name('textbook.reserve');
 Route::get('/textbook/{textbook}', 'TextbookController@showTextbookDetail')->name('textbook.detail');
 Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
