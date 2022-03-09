@@ -74,7 +74,15 @@ class TextbookController extends Controller
             $reservation = false;
         }
         
-        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation]);
+        $reserved = false;
+        
+        if($textbook->reservation_id) {
+            $reserved = true;
+        } else {
+            $reserved = false;
+        }
+        
+        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation, 'reserved' => $reserved]);
     }
     
     public function addFavoriteTextbook(Textbook $textbook) {
