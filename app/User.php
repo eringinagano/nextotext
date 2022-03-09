@@ -54,7 +54,7 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Category');
     }
     
-    public function favoriteItems() {
+    public function favoriteTextbooks() {
         return $this->belongsToMany('App\Textbook');
     }
     

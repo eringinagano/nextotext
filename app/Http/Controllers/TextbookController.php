@@ -55,7 +55,7 @@ class TextbookController extends Controller
         
         $favorite = false;
         
-       foreach($user_infos->favoriteItems as $user_info) {
+       foreach($user_infos->favoriteTextbooks as $user_info) {
             if($user_info['id'] === $textbook_id) {
                 $favorite = true;
                 break;
@@ -79,7 +79,7 @@ class TextbookController extends Controller
     
     public function addFavoriteTextbook(Textbook $textbook) {
         $user = Auth::user();
-        $user->favoriteItems()->syncWithoutDetaching($textbook->id);
+        $user->favoriteTextbooks()->syncWithoutDetaching($textbook->id);
 
         return redirect(route('textbook.index'));
     }
