@@ -1,0 +1,46 @@
+.mainvisual {
+    background: url(../img/mainpage.jpg);
+    background-size: cover;
+    height: 110vh;
+}
+
+.text-wrapper {
+    padding-top: 14rem;
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+}
+
+.text-wrapper p {
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+}
+
+.main-title {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about-wrapper {
+    padding-top: 4rem;
+    text-align: center;
+}
+
+.about-wrapper p {
+    font-size: 1.3rem;
+    line-height: 3rem;
+    margin-bottom: 3.3rem;
+}
+
+.about-title {
+     font-family:'Fredoka', sans-serif;
+     font-size: 3rem;
+     margin-bottom: 2.5rem;
+}
+
+.about-btn {
+    padding: 1rem 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.15rem;
+    letter-spacing: 0.1rem;
+}

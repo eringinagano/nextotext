@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/detail.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -38,10 +38,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <form class="form-inline my-2 my-lg-0">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -90,7 +86,22 @@
         </nav>
 
         <main class="py-4">
-            @yield('content')
+            <div class="mainvisual">
+                <div class="text-wrapper">
+                    <h2 class="main-title">NextoText</h2>
+                    <p>あなたの教科書を次の世代へ</p>
+                </div>
+            </div>
+            <div class="about-wrapper">
+                <h2 class="about-title">Concept</h2>
+                <p>
+                    大学生が4年間で教科書に費やす金額は10万円から30万円だと言われています。<br>
+                    授業料や生活費などが必要とされる学生にとってそれらは少なくない出費となります。<br>
+                    このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。<br>
+                    「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。<br>
+                </p>
+                <a class="btn btn-success about-btn" href="{{ route('textbook.index') }}" style="color:white">教科書一覧をみる</a>
+            </div>
         </main>
     </div>
 </body>
