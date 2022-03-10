@@ -13,11 +13,15 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <!--<link rel="dns-prefetch" href="//fonts.gstatic.com">-->
+    <!--<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">-->
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/detail.css') }}" rel="stylesheet">
 </head>
 <body>
@@ -53,6 +57,9 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('textbook.favorites') }}">気になる教科書</a>
                             </li>
