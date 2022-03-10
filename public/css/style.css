@@ -1,0 +1,23 @@
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: bold;
+    position: relative;
+    margin-right: 10px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+
+.navbar-brand {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.3rem;
+}
