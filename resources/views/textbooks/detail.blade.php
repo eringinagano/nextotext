@@ -1,18 +1,18 @@
 @extends('layouts.textbook_detail_header')
 @section('content')
 <div class="container detail-container">
-    <h2 class="detail-title">教科書詳細画面</h2>
+    <h2 class="detail-title">Textbook Detail</h2>
     <div class="detail-wrapper">
       <ul>
           <li>
             <img src="{{ asset('storage/'.$textbook->image) }}" width="400px" height="400px">
           </li>
           <li class="detail-text">
-            <p>タイトル：{{ $textbook->name }}</p>
-            <p>著者：{{ $textbook->author->name }}</p>
-            <p>学問分野：{{ $textbook->category->name }}</p>
-            <p>教科書の状態：{{ $textbook->textbook_state->name }}</p>
-            <p>出品開始日：{{ $textbook->date_time }}</p>
+            <p>Title：{{ $textbook->name }}</p>
+            <p>Author：{{ $textbook->author->name }}</p>
+            <p>Category：{{ $textbook->category->name }}</p>
+            <p>Textbook State：{{ $textbook->textbook_state->name }}</p>
+            <p>Relese Date：{{ $textbook->date_time }}</p>
             @if($favorite)
               <form action="/textbook/{{ $textbook->id }}/remove" method="POST">
                 @csrf

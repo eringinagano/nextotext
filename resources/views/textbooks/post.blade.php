@@ -1,12 +1,12 @@
 @extends('layouts.textbook_post_header')
 @section('content')
 <div class="container post-container">
-    <h2 class="post-title">教科書出品画面</h2>
+    <h2 class="post-title">Post</h2>
     <form action="{{ route('textbook.post') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="post-wrapper">
             <dl>
-                <dt>画像</dt>
+                <dt>Image</dt>
                 <dd>
                     <div class="form-group">
                         <div class="custom-file">
