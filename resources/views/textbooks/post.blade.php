@@ -85,7 +85,7 @@
             </dl>
         </div>
         <div class="btn-wrapper">
-            <input type="submit" class="btn btn-outline-success post-btn" value="出品"></a>
+            <input type="submit" class="btn btn-outline-success post-btn" value="出品">
         </div>
     </form>    
 </div>

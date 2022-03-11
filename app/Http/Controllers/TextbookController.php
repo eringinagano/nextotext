@@ -44,8 +44,8 @@ class TextbookController extends Controller
         
     }
     
-    public function showTextbooks(Textbook $textbook) {
-        return view('textbooks/index')->with(['textbooks' => $textbook->get()]);
+    public function showTextbooks(Textbook $textbook, Category $category) {
+        return view('textbooks/index')->with(['textbooks' => $textbook->get(), 'categories' => $category->get()]);
     }
     
     public function showTextbookDetail(Textbook $textbook) {
@@ -114,9 +114,15 @@ class TextbookController extends Controller
     
     public function showReservations() {
         $user_id = Auth::id();
-        
         $reservation_infos = Textbook::where('reservation_id', '=', $user_id)->get();
         
         return view('textbooks/reservations')->with(['reservation_infos' => $reservation_infos]);
+    }
+    
+    public function checkCategory(Request $request) {
+        $category_id = $request['category_id'];
+        $codition_textbooks = Textbook::where('category_id', '=', $category_id)->get();
+        
+        return view('textbooks/category')->with(['condition_textbooks' => $codition_textbooks]);
     }
 }
