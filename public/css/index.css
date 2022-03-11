@@ -1,11 +1,13 @@
 .index-container {
     text-align: center;
     margin-top: 5rem;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .index-title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
+    letter-spacing: 0.3rem;
 }
 
 .index-container ul {
