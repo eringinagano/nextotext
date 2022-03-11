@@ -1,12 +1,12 @@
 @extends('layouts.profile_header')
 @section('content')
 <div class="container profile-container">
-    <h2 class="profile-title">プロフィール編集画面</h2>
+    <h2 class="profile-title">Profile</h2>
     <form action="{{ route('profile.edit') }}" method="POST">
         @csrf
         <div class="profile-wrapper">
             <dl>
-                <dt>ユーザーネーム</dt>
+                <dt>Name</dt>
                 <dd>
                     <input class="form-control" type="text" name="user[name]" placeholder="{{$user->name}}" value="{{ $user->name }}"/>
                     @error('user.name')
@@ -17,7 +17,7 @@
                 </dd>
             </dl>
             <dl>
-                <dt>在籍している大学</dt>
+                <dt>University</dt>
                 <dd>
                     <select name="user[university_id]" class="custom-select">
                         @foreach($universities as $university)
@@ -32,7 +32,7 @@
                 </dd>
             </dl>
             <dl>
-                <dt>興味のある学問分野</dt>
+                <dt>Interested Categories</dt>
                 <dd>
                     <select name="category_id[]" class="custom-select" size="3" multiple>
                         @foreach($categories as $category)
@@ -42,7 +42,7 @@
                 </dd>
             </dl> 
         </div>
-        <input type="submit" class="btn btn-success edit-btn"></a>
+        <input type="submit" class="btn btn-success edit-btn" value="更新"></a>
     </form>    
 </div>
 @endsection

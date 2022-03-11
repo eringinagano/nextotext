@@ -1,18 +1,18 @@
 @extends('layouts.profile_header')
 @section('content')
 <div class="container profile-container">
-    <h2 class="profile-title">プロフィール</h2>
+    <h2 class="profile-title">Profile</h2>
     <div class="profile-wrapper">
         <dl>
-            <dt>ユーザーネーム</dt>
+            <dt>Name</dt>
             <dd>{{$user->name}}</dd>
         </dl>
         <dl>
-            <dt>在籍している大学</dt>
+            <dt>University</dt>
             <dd>{{$user->university->name}}</dd>
         </dl>
         <dl>
-            <dt>興味のある学問分野</dt>
+            <dt>Interested Categories</dt>
             <dd>
                 @foreach($user->categories as $category)
                 {{$category->name}}
