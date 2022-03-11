@@ -1,6 +1,6 @@
 @extends('layouts.textbook_detail_header')
 @section('content')
-<div class="container profile-container">
+<div class="container detail-container">
     <h2 class="detail-title">教科書詳細画面</h2>
     <div class="detail-wrapper">
       <ul>
