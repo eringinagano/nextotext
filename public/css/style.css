@@ -17,9 +17,22 @@ body {
     text-decoration: none;
 }
 
+.navbar-light .navbar-nav .btn-outline-success {
+    color: #38c172;
+}
+
+.navbar-light .navbar-nav .btn-outline-success:hover {
+    color: white;
+}
+
+.btn {
+    font-weight: bold
+}
+
 
 .navbar-brand {
     font-family: 'Fredoka', sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
 }
+

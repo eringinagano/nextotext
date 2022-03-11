@@ -2,6 +2,7 @@
     background: url(../img/mainpage.jpg);
     background-size: cover;
     height: 110vh;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .text-wrapper {
@@ -16,7 +17,6 @@
 }
 
 .main-title {
-    font-family: 'Fredoka', sans-serif;
     font-size: 4rem;
     margin-bottom: 1rem;
 }
@@ -36,10 +36,11 @@
      font-family:'Fredoka', sans-serif;
      font-size: 3rem;
      margin-bottom: 2.5rem;
+     font-weight: bold;
 }
 
 .about-btn {
-    padding: 1rem 2rem;
+    padding: 0.6rem 1rem;
     margin-bottom: 3rem;
     font-size: 1.15rem;
     letter-spacing: 0.1rem;

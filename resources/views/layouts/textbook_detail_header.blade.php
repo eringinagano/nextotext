@@ -38,10 +38,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <form class="form-inline my-2 my-lg-0">
-                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -49,11 +45,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">ログイン</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">登録</a>
                                 </li>
                             @endif
                         @else
@@ -80,7 +76,7 @@
                                 </form>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-success" href="{{ route('textbook.post') }}" style="color:white">出品</a>
+                                <a class="nav-link btn btn-outline-success" href="{{ route('textbook.post') }}">出品</a>
                             </li>
 
                         @endguest

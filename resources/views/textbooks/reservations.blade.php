@@ -11,7 +11,7 @@
                   <p>Title：{{ $reservation_info->name }}</p>
                   <p>Category：{{ $reservation_info->category->name}}</p>
               </div>
-              <a href="/textbook/{{ $reservation_info->id }}" class="btn btn-success index-btn">詳細をみる</a>
+              <a href="/textbook/{{ $reservation_info->id }}" class="btn btn-outline-success index-btn">詳細</a>
             </div>
         </li>
         @endforeach
