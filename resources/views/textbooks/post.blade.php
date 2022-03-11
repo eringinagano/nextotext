@@ -6,7 +6,7 @@
         @csrf
         <div class="post-wrapper">
             <dl>
-                <dt>Image</dt>
+                <dt>画像</dt>
                 <dd>
                     <div class="form-group">
                         <div class="custom-file">
@@ -85,7 +85,7 @@
             </dl>
         </div>
         <div class="btn-wrapper">
-            <input type="submit" class="btn btn-success post-btn" value="出品"></a>
+            <input type="submit" class="btn btn-outline-success post-btn" value="出品"></a>
         </div>
     </form>    
 </div>

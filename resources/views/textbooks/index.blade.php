@@ -8,10 +8,10 @@
             <div class="index-container">
               <img src="{{ asset('storage/'.$textbook->image) }}" width="200px" height="200px">
               <div class="text-wrapper">
-                  <p>Title：{{ $textbook->name }}</p>
-                  <p>Category：{{ $textbook->category->name}}</p>
+                  <p>タイトル：{{ $textbook->name }}</p>
+                  <p>カテゴリー：{{ $textbook->category->name}}</p>
               </div>
-              <a href="/textbook/{{ $textbook->id }}" class="btn btn-success index-btn">詳細をみる</a>
+              <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success index-btn">詳細</a>
             </div>
         </li>
         @endforeach

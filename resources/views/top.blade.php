@@ -76,7 +76,7 @@
                                 </form>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-success" href="{{ route('textbook.post') }}" style="color:white">出品</a>
+                                <a class="nav-link btn btn-outline-success" href="{{ route('textbook.post') }}">出品</a>
                             </li>
 
                         @endguest
@@ -100,7 +100,7 @@
                     このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。<br>
                     「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。<br>
                 </p>
-                <a class="btn btn-success about-btn" href="{{ route('textbook.index') }}" style="color:white">教科書一覧をみる</a>
+                <a class="btn btn-outline-success about-btn" href="{{ route('textbook.index') }}">教科書一覧をみる</a>
             </div>
         </main>
     </div>
