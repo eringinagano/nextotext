@@ -8,8 +8,8 @@
         <li>
           <img src="{{ asset('storage/'.$reservation_info->image) }}" width="200px" height="200px">
           <div class="text-wrapper">
-              <p>Title：{{ $reservation_info->name }}</p>
-              <p>Category：{{ $reservation_info->category->name}}</p>
+              <p>タイトル：{{ $reservation_info->name }}</p>
+              <p>カテゴリー：{{ $reservation_info->category->name}}</p>
           </div>
           <a href="/textbook/{{ $reservation_info->id }}" class="btn btn-outline-success category-btn">詳細</a>
         </li>
