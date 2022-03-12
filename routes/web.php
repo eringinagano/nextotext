@@ -41,4 +41,6 @@ Route::post('/textbook/category', 'TextbookController@checkCategory')->name('tex
 Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('textbook.favorite');
 Route::post('/textbook/{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('textbook.remove');
 
+Route::get('/message', 'MessageController@showMessages')->name('messages');
+
 Route::get('/home', 'HomeController@index')->name('home');
