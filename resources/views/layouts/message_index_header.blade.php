@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/category.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/message_index.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">

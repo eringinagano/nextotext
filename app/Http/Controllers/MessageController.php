@@ -7,4 +7,7 @@ use Illuminate\Http\Request;
 class MessageController extends Controller
 {
     //
+    public function showMessages() {
+        return view('messages/index');
+    }
 }
