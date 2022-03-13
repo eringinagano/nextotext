@@ -1,0 +1,30 @@
+.message-container {
+    text-align: center;
+    margin-top: 5rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: bold;
+}
+
+.message-title {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.3rem;
+}
+
+.message-wrapper {
+    margin-top: 3rem;
+    margin-left: 15rem;
+    width: 55%;
+}
+
+.message-wrapper li {
+    font-size: 1.2rem;
+}
+
+.message-btn {
+    margin-left: 2rem;
+}
+
+.list-group-item {
+    text-align: center;
+}
