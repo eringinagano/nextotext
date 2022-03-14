@@ -1,33 +1,27 @@
 .profile-container {
-    text-align: center;
     margin-top: 5rem;
-     font-family: 'Fredoka', sans-serif;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .profile-title {
     font-size: 3rem;
     font-weight: bold;
+    text-align: center;
     letter-spacing: 0.3rem;
 }
 
 .profile-wrapper {
-    text-align: center;
-    margin: 60px auto;
-    width: 57%;
-    font-size: 1.6rem;
-}
-
-.profile-wrapper dl {
-    display: flex;
-    margin-top: 0.4rem;
+    margin: 40px auto 30px;
+    width: 45%;
 }
 
 .profile-wrapper dt {
-    width: 50%;
-    text-align: left;
-    letter-spacing: 0.2rem;
-    font-weight: normal;
-    margin-right: 4rem;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.btn-wrapper {
+    text-align: center;
 }
 
 .edit-btn {
