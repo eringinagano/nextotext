@@ -6,7 +6,7 @@
         @csrf
         <div class="profile-wrapper">
             <dl>
-                <dt>Name</dt>
+                <dt>ユーザーネーム</dt>
                 <dd>
                     <input class="form-control" type="text" name="user[name]" placeholder="{{$user->name}}" value="{{ $user->name }}"/>
                     @error('user.name')
@@ -17,7 +17,7 @@
                 </dd>
             </dl>
             <dl>
-                <dt>University</dt>
+                <dt>大学名</dt>
                 <dd>
                     <select name="user[university_id]" class="custom-select">
                         @foreach($universities as $university)
@@ -32,7 +32,7 @@
                 </dd>
             </dl>
             <dl>
-                <dt>Interested Categories</dt>
+                <dt>興味のあるカテゴリー</dt>
                 <dd>
                     <select name="category_id[]" class="custom-select" size="3" multiple>
                         @foreach($categories as $category)
@@ -40,9 +40,27 @@
                         @endforeach  
                     </select>
                 </dd>
-            </dl> 
+            </dl>
+            <dl>
+                <dt>プロフィール画像</dt>
+                <dd>
+                    <div class="form-group">
+                        <div class="custom-file">
+                          <input type="file" class="custom-file-input" id="inputFile" name="image">
+                          <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択</label>
+                        </div>
+                     </div>
+                    @error('image')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </dd>
+            </dl>
         </div>
-        <input type="submit" class="btn btn-success edit-btn" value="更新"></a>
+        <div class="btn-wrapper">
+            <input type="submit" class="btn btn-success edit-btn" value="更新"></a>
+        </div>
     </form>    
 </div>
 @endsection
