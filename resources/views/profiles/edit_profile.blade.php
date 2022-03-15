@@ -2,14 +2,14 @@
 @section('content')
 <div class="container profile-container">
     <h2 class="profile-title">Profile</h2>
-    <form action="{{ route('profile.edit') }}" method="POST">
+    <form action="{{ route('profile.edit') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="profile-wrapper">
             <dl>
                 <dt>ユーザーネーム</dt>
                 <dd>
-                    <input class="form-control" type="text" name="user[name]" placeholder="{{$user->name}}" value="{{ $user->name }}"/>
-                    @error('user.name')
+                    <input class="form-control" type="text" name="name" placeholder="{{$user->name}}" value="{{ $user->name }}"/>
+                    @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
                         </span>
@@ -19,7 +19,7 @@
             <dl>
                 <dt>大学名</dt>
                 <dd>
-                    <select name="user[university_id]" class="custom-select">
+                    <select name="university_id" class="custom-select">
                         @foreach($universities as $university)
                           <option value="{{ $university->id }}">{{ $university->name }}</option>
                         @endforeach
