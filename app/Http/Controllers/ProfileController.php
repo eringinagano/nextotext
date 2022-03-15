@@ -20,13 +20,17 @@ class ProfileController extends Controller
     }
     
     public function editProfile(Request $request) {
-        $user = Auth::user();
+        $img_name = $request->file('image')->getClientOriginalName();
+        $img_path = $request->file('image')->storeAs('',$img_name,'public');
         
+        $user = Auth::user();
         $user->categories()->sync($request['category_id']);
         
-        $input_user = $request['user'];
-        $user->fill($input_user)->save();
-        
+        $user->update([
+            'name' => $request['name'],
+            'university_id' => $request['university_id'],
+            'image' => $img_path
+        ]);
         
         return view('profiles/profile')->with('user', $user);
         
