@@ -1,4 +1,4 @@
-@extends('layouts.profile_header')
+@extends('layouts.edit_profile_header')
 @section('content')
 <div class="container profile-container">
     <h2 class="profile-title">Profile</h2>

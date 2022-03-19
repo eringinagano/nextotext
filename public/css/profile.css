@@ -12,12 +12,34 @@
 
 .profile-wrapper {
     margin: 40px auto 30px;
-    width: 45%;
+    width: 70%;
+}
+
+.profile-wrapper ul {
+    display: flex;
+}
+
+.profile-wrapper li {
+    list-style: none;
+}
+
+.profile-wrapper .profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 10rem;
 }
 
 .profile-wrapper dt {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-size: 1.5rem;
+}
+
+.profile-wrapper dd {
+    font-size: 1.2rem;
+}
+
+.text-wrapper {
+    margin-top: 0.7rem;
 }
 
 .btn-wrapper {
@@ -31,12 +53,12 @@
 }
 
 .show-textbooks {
-    margin-top: 35px;
+    margin-top: 1.5rem;
     text-align: right;
     width: 95%;
 }
 
 .show-textbooks a {
-    margin-right: 10px;
+    margin-right: 0.7rem;
     cursor: pointer;
 }
