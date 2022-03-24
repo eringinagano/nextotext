@@ -25,13 +25,12 @@
               </form>
             @endif
             @if($reservation)
-              @if($reserved)
-                <p class="reserved">この教科書は予約済みです</p>
-              @else
-                <a href="/textbook/{{ $textbook->id }}/reserve" class="btn btn-outline-success detail-btn">予約する</a>
-              @endif
+              <form action="/textbook/{{ $textbook->id }}/chat" method="GET">
+                <input type="submit" class="btn btn-outline-success detail-btn" value="予約する"></input>
+              </form>
             @else
-                <a href="" class="btn btn-outline-success detail-btn">受け取る</a>
+              <form action="/textbook/{{ $textbook->id }}/chat" method="GET">
+                <input type="submit" class="btn btn-outline-success detail-btn" value="受け取る"></input>
               </form>
             @endif
           </li>

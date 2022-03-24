@@ -7,6 +7,7 @@ use App\Category;
 use App\Author;
 use App\Textbook;
 use App\TextbookState;
+use App\Message;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -124,5 +125,18 @@ class TextbookController extends Controller
         $codition_textbooks = Textbook::where('category_id', '=', $category_id)->get();
         
         return view('textbooks/category')->with(['condition_textbooks' => $codition_textbooks]);
+    }
+    
+    public function addChat(Textbook $textbook, Message $message) {
+        $user_id = Auth::id();
+        
+        $message->create([
+            'buyer_id' => $user_id,
+            'seller_id' => $textbook->seller_id,
+            'textbook_id'=> $textbook->id
+        ]);
+        
+        
+        return view('messages/index');
     }
 }

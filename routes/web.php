@@ -35,6 +35,7 @@ Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textb
 Route::get('/textbook/favorites', 'TextbookController@showFavorites')->name('textbook.favorites');
 Route::get('/textbook/reservations', 'TextbookController@showReservations')->name('textbook.reservations');
 Route::get('/textbook/{textbook}/reserve', 'TextbookController@reserveTextbook')->name('textbook.reserve');
+Route::get('/textbook/{textbook}/chat', 'TextbookController@addChat')->name('textbook.chat');
 Route::get('/textbook/{textbook}', 'TextbookController@showTextbookDetail')->name('textbook.detail');
 Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
 Route::post('/textbook/category', 'TextbookController@checkCategory')->name('textbook.category');
