@@ -60,9 +60,6 @@
                                 <a class="nav-link" href="{{ route('textbook.favorites') }}">気になる教科書</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('textbook.reservations') }}">予約した教科書</a>
-                            </li>
-                            <li class="nav-item">
                                 <a class="nav-link" href="{{ route('messages') }}">チャット</a>
                             </li>
                             <li class="nav-item">
