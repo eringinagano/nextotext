@@ -18,7 +18,7 @@ class CreateMessagesTable extends Migration
             $table->integer('buyer_id')->unsigned();
             $table->integer('seller_id')->unsigned();
             $table->integer('textbook_id')->unsigned();
-            $table->longText('message');
+            $table->longText('message')->nullable();
             $table->timestamps();
         });
     }
