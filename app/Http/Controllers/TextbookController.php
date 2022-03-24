@@ -136,7 +136,6 @@ class TextbookController extends Controller
             'textbook_id'=> $textbook->id
         ]);
         
-        
-        return view('messages/index');
+        return redirect(route('messages'));
     }
 }
