@@ -16,8 +16,16 @@ class Textbook extends Model
         return $this->belongsTo('App\Category');
     }
     
-    public function user() {
+     public function user() {
         return $this->belongsTo('App\User');
+    }
+    
+    public function buyBook() {
+        return $this->belongsTo('App\User', 'buyer_id');
+    }
+    
+    public function sellBook() {
+        return $this->belongsTo('App\User', 'seller_id');
     }
     
     public function textbook_state() {

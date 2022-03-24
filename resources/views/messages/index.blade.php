@@ -4,11 +4,9 @@
     <h2 class="message-title">Chat</h2>
     <div class="message-wrapper">
       <ul class="list-group">
-        <li class="list-group-item">山田太郎<a class="btn btn-outline-success message-btn">チャット</a></li>
-        <li class="list-group-item">佐藤寛太<a class="btn btn-outline-success message-btn">チャット</a></li>
-        <li class="list-group-item">谷本聡<a class="btn btn-outline-success message-btn">チャット</a></li>
-        <li class="list-group-item">梶田啓介<a class="btn btn-outline-success message-btn">チャット</a></li>
-        <li class="list-group-item">田村将司<a class="btn btn-outline-success message-btn">チャット</a></li>
+        @foreach($messages as $message)
+          <li class="list-group-item">{{ $message->textbook->sellBook->name }}<a class="btn btn-outline-success message-btn">チャット</a></li>
+        @endforeach
       </ul>
     </div>
 </div>
