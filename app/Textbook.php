@@ -36,6 +36,18 @@ class Textbook extends Model
         return $this->belongsToMany('App\User');
     }
     
+    public function messages() {
+        return $this->hasMany('App\Message');
+    }
+    
+     public function buyBooks() {
+        return $this->hasMany('App\Message', 'buyer_id');
+    }
+    
+    public function sellBooks() {
+        return $this->hasMany('App\Message', 'seller_id');
+    }
+    
     public function isCheckDate($user_id) {
         // 
         $now = new Carbon();
