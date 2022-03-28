@@ -14,7 +14,11 @@
                 </dl>
                 <dl>
                     <dt>University</dt>
-                    <dd>{{$user->university->name}}</dd>
+                    @if($university)
+                      <dd>{{$user->university->name}}</dd>
+                    @else
+                      <dd class="university_null"></dd>
+                    @endif
                 </dl>
                 <dl>
                     <dt>Interested Categories</dt>
