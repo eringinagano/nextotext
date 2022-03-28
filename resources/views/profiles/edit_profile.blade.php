@@ -17,13 +17,9 @@
                 </dd>
             </dl>
             <dl>
-                <dt>大学名</dt>
+                <dt>大学名　※フルネームで入力してください　例：山田大学</dt>
                 <dd>
-                    <select name="university_id" class="custom-select">
-                        @foreach($universities as $university)
-                          <option value="{{ $university->id }}">{{ $university->name }}</option>
-                        @endforeach
-                    </select>
+                    <input class="form-control" type="text" name="university_name" placeholder="{{$user->university_name}}" value="{{ $user->university_name }}"/>
                     @error('user.university_id')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

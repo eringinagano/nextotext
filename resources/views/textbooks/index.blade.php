@@ -30,6 +30,7 @@
           <div class="text-wrapper">
               <p>タイトル：{{ $textbook->name }}</p>
               <p>カテゴリー：{{ $textbook->category->name}}</p>
+              <p>使用された大学：{{ $textbook->sellBook->university_name}}</p>
           </div>
           <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success index-btn">詳細</a>
         </li>

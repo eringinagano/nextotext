@@ -16,7 +16,7 @@ class ProfileController extends Controller
         
         $university = true;
         
-        if($user['university_id'] === NULL) {
+        if($user['university_name'] === NULL) {
             $university = false;
         } else {
             $university = true;
@@ -25,8 +25,8 @@ class ProfileController extends Controller
         return view('profiles/profile')->with(['user' => $user, 'university' => $university]);
     }
     
-    public function showEditProfile(University $university, Category $category) {
-        return view('profiles/edit_profile')->with(['user' => Auth::user(), 'universities' => $university->get(), 'categories' => $category->get()]);
+    public function showEditProfile(Category $category) {
+        return view('profiles/edit_profile')->with(['user' => Auth::user(), 'categories' => $category->get()]);
     }
     
     public function editProfile(Request $request) {
@@ -38,7 +38,7 @@ class ProfileController extends Controller
         
         $user->update([
             'name' => $request['name'],
-            'university_id' => $request['university_id'],
+            'university_name' => $request['university_name'],
             'image' => $img_path
         ]);
         
