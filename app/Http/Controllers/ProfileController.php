@@ -12,7 +12,17 @@ class ProfileController extends Controller
 {
     //
     public function showProfile() {
-        return view('profiles/profile')->with('user', Auth::user());
+        $user = Auth::user();
+        
+        $university = true;
+        
+        if($user['university_id'] === NULL) {
+            $university = false;
+        } else {
+            $university = true;
+        }
+        
+        return view('profiles/profile')->with(['user' => $user, 'university' => $university]);
     }
     
     public function showEditProfile(University $university, Category $category) {
@@ -32,7 +42,7 @@ class ProfileController extends Controller
             'image' => $img_path
         ]);
         
-        return view('profiles/profile')->with('user', $user);
+        return redirect( route('profile') );
         
     }
     
