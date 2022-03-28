@@ -19,6 +19,10 @@ Auth::routes([
     'register' => false
 ]);
 
+Route::get('/login/{provider}', 'Auth\LoginController@redirectToProvider')->name('login');
+Route::get('/linelogin/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
 Route::get('/', function() {
     return view('top');
 });
