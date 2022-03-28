@@ -36,10 +36,6 @@ class Textbook extends Model
         return $this->belongsTo('App\Author');
     }
     
-    public function university() {
-        return $this->belongsTo('App\University');
-    }
-    
     public function favoriteItems() {
         return $this->belongsToMany('App\User');
     }

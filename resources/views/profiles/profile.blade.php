@@ -15,7 +15,7 @@
                 <dl>
                     <dt>University</dt>
                     @if($university)
-                      <dd>{{$user->university->name}}</dd>
+                      <dd>{{$user->university_name}}</dd>
                     @else
                       <dd class="university_null"></dd>
                     @endif

@@ -37,7 +37,6 @@ class TextbookController extends Controller
             'category_id' => $request['category_id'],
             'seller_id' => $user->id,
             'textbook_state_id' => $request['textbook_state_id'],
-            'university_id' => $user->university_id,
             'date_time' => $date,
         ]);
         

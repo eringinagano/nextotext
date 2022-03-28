@@ -24,7 +24,6 @@ class CreateTextbooksTable extends Migration
             $table->integer('reservation_id')->nullable()->unsigned();
             $table->integer('textbook_state_id')->unsigned();
             $table->integer('author_id')->unsigned();
-            $table->integer('university_id')->unsigned();
             $table->timestamps();
         });
     }
