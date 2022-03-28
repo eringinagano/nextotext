@@ -45,13 +45,8 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">ログイン</a>
+                                <a href="{{ route('login',['provider' => 'line']) }}">LINEでログイン</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">登録</a>
-                                </li>
-                            @endif
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>

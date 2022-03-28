@@ -45,22 +45,14 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a href="{{ route('login',['provider' => 'line']) }}">LINEでログイン</a>
                             </li>
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('textbook.favorites') }}">気になる教科書</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('textbook.reservations') }}">予約した教科書</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('messages') }}">チャット</a>
