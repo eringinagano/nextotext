@@ -27,9 +27,6 @@ Route::get('/', function() {
     return view('top');
 });
 
-Route::get('/register', 'Auth\RegisterController@getRegistrationForm')->name('register');
-Route::post('/register', 'Auth\RegisterController@postRegistrationForm')->name('register');
-
 Route::get('/profile', 'ProfileController@showProfile')->name('profile');
 Route::get('/profile/edit', 'ProfileController@showEditProfile')->name('profile.edit');
 Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
