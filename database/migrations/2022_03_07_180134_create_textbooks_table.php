@@ -17,13 +17,13 @@ class CreateTextbooksTable extends Migration
             $table->bigIncrements('id');
             $table->string('image');
             $table->string('name', 100);
+            $table->string('author_name', 100);
             $table->string('date_time');
             $table->integer('category_id')->unsigned();
             $table->integer('buyer_id')->nullable()->unsigned();
             $table->integer('seller_id')->unsigned();
             $table->integer('reservation_id')->nullable()->unsigned();
             $table->integer('textbook_state_id')->unsigned();
-            $table->integer('author_id')->unsigned();
             $table->timestamps();
         });
     }
