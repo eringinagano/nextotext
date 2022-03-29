@@ -25,6 +25,10 @@ body {
     color: white;
 }
 
+.line-btn {
+    width: 8rem;
+}
+
 .btn {
     font-weight: bold
 }

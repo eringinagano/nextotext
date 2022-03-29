@@ -48,7 +48,7 @@
                                 <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
                             </li>
                             <li class="nav-item">
-                                <a href="{{ route('login',['provider' => 'line']) }}">LINEでログイン</a>
+                                <a href="{{ route('login',['provider' => 'line']) }}"><img src="../img/btn_login_base.png" class="line-btn"></a>
                             </li>
                         @else
                             <li class="nav-item">
