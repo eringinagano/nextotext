@@ -11,6 +11,7 @@ use App\Message;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Builder;
 
 class TextbookController extends Controller
 {
@@ -105,8 +106,12 @@ class TextbookController extends Controller
     }
     
     public function checkCategory(Request $request) {
+        $university_name = $request['university_name'];
         $category_id = $request['category_id'];
-        $codition_textbooks = Textbook::where('category_id', '=', $category_id)->get();
+        $codition_textbooks = Textbook::whereHas('sellBook', function (Builder $query) use ($university_name){
+                                $query->where('university_name', 'like', $university_name);})
+                                ->where('category_id', $category_id)
+                                ->get();
         
         return view('textbooks/category')->with(['condition_textbooks' => $codition_textbooks]);
     }

@@ -9,6 +9,9 @@
           <li class="input-text">
             <p>検索条件</p>
           </li>
+          <li class="university-condition">
+            <input name="university_name" class="form-control" placeholder="大学名　例：山田大学">  
+          </li>
           <li class="input-wrapper">
             <select name="category_id" class="custom-select">
               @foreach($categories as $category)
