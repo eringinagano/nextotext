@@ -33,13 +33,9 @@
                 </dd>
             </dl>
             <dl>
-                <dt>著者</dt>
+                <dt>著者　例：山田太郎</dt>
                 <dd>
-                    <select name="author_id" class="custom-select">
-                        @foreach($authors as $author)
-                          <option value="{{ $author->id }}">{{ $author->name }}</option>
-                        @endforeach
-                    </select>
+                    <input class="form-control" type="text" name="author_name"/>
                     @error('author_id')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>

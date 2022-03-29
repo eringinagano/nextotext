@@ -9,7 +9,7 @@
           </li>
           <li class="detail-text">
             <p>タイトル：{{ $textbook->name }}</p>
-            <p>著者：{{ $textbook->author->name }}</p>
+            <p>著者：{{ $textbook->author_name }}</p>
             <p>カテゴリー：{{ $textbook->category->name }}</p>
             <p>使用された大学：{{ $textbook->sellBook->university_name}}</p>
             <p>教科書の状態：{{ $textbook->textbook_state->name }}</p>

@@ -16,7 +16,7 @@ class TextbookController extends Controller
 {
     //
     public function showTextbookForm(Category $category, Author $author, TextbookState $textbookstate) {
-        return view('textbooks/post')->with(['categories' => $category->get(), 'authors' => $author->get(), 'textbookstates' => $textbookstate->get()]);
+        return view('textbooks/post')->with(['categories' => $category->get(), 'textbookstates' => $textbookstate->get()]);
     }
     
     public function postTextbookForm(Textbook $textbook, Request $request) {
@@ -33,7 +33,7 @@ class TextbookController extends Controller
         $textbook->create([
             'image'=> $img_path,
             'name' => $request['name'],
-            'author_id' => $request['author_id'],
+            'author_name' => $request['author_name'],
             'category_id' => $request['category_id'],
             'seller_id' => $user->id,
             'textbook_state_id' => $request['textbook_state_id'],
