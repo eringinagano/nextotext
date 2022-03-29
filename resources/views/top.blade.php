@@ -44,6 +44,9 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
+                             <li class="nav-item">
+                                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
+                            </li>
                             <li class="nav-item">
                                 <a href="{{ route('login',['provider' => 'line']) }}">LINEでログイン</a>
                             </li>

@@ -35,7 +35,10 @@
               <p>カテゴリー：{{ $textbook->category->name}}</p>
               <p>使用された大学：{{ $textbook->sellBook->university_name}}</p>
           </div>
-          <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success index-btn">詳細</a>
+          @guest
+          @else
+            <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success index-btn">詳細</a>
+          @endguest
         </li>
         @endforeach
       </ul>
