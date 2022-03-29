@@ -9,7 +9,8 @@
           <img src="{{ asset('storage/'.$condition_textbook->image) }}" width="200px" height="200px">
           <div class="text-wrapper">
               <p>タイトル：{{ $condition_textbook->name }}</p>
-              <p>カテゴリー：{{ $condition_textbook->category->name}}</p>
+              <p>カテゴリー：{{ $condition_textbook->category->name }}</p>
+              <p>使用された大学：{{ $condition_textbook->sellBook->university_name }}</p>
           </div>
           <a href="/textbook/{{ $condition_textbook->id }}" class="btn btn-outline-success category-btn">詳細</a>
         </li>

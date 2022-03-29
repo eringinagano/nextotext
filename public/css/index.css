@@ -26,7 +26,11 @@
 .input-text {
     margin-top: 0.3rem;
     margin-right: 1.2rem;
-    margin-left: 48rem;
+    margin-left: 33rem;
+}
+
+.university-condition {
+    margin-right: 1rem;
 }
 
 .condition-wrapper p {
