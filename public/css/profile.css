@@ -56,6 +56,36 @@
     cursor: pointer;
 }
 
+.post-textbooks-wrapper {
+    width: 80%;
+    margin: 2rem auto 0;
+    border-top: solid 1px;
+    border-top-color: silver;
+}
+
+.post-textbooks-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+}
+
+.post-textbooks-wrapper ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post-textbooks-wrapper li {
+    list-style: none;
+    margin: 2rem 1rem 1rem;
+}
+
+.post-textbooks-wrapper li img {
+    width: 300px;
+    height: 300px;
+}
+
+
 .show-textbooks {
     margin-top: 1.5rem;
     text-align: right;
