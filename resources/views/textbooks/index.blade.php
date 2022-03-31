@@ -2,12 +2,28 @@
 @section('content')
 <div class="container index-container">
     <h2 class="index-title">Textbooks</h2>
+    <form action="{{ route('textbook.search') }}" method="POST">
+      @csrf
+      <div class="search-wrapper">
+        <ul>
+          <li class="input-text">
+            <p>フリーワード</p>
+          </li>
+          <li class="search-word">
+            <input name="search_word" class="form-control" placeholder="著者名・タイトル名">  
+          </li>
+          <li>
+            <input type="submit" class="btn btn-outline-success" value="検索">
+          </li>
+        </ul>
+      </div>
+    </form>
     <form action="{{ route('textbook.category') }}" method="POST">
       @csrf    
       <div class="condition-wrapper">
         <ul>
           <li class="input-text">
-            <p>検索条件</p>
+            <p>条件指定</p>
           </li>
           <li class="university-condition">
             <input name="university_name" class="form-control" placeholder="大学名　例：山田大学">  
@@ -20,7 +36,7 @@
             </select>
           </li>
           <li>
-            <input type="submit" class="btn btn-outline-success post-btn" value="検索">
+            <input type="submit" class="btn btn-outline-success" value="検索">
           </li>
         </ul>
       </div>

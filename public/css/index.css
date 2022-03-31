@@ -11,8 +11,28 @@
     letter-spacing: 0.3rem;
 }
 
+.search-wrapper {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    margin-right: 3.5rem;
+}
+
+.search-wrapper ul {
+    display: flex;
+}
+
+.search-wrapper li {
+    width: 20%;
+    list-style: none;
+}
+
+.search-wrapper .search-word {
+    width: 40%;
+}
+
 .condition-wrapper {
-    margin-top: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .condition-wrapper ul {
@@ -43,7 +63,7 @@
 
 .index-wrapper ul {
     display: flex;
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
 }
 
 .index-wrapper li {
