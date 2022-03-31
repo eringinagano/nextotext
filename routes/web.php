@@ -38,6 +38,7 @@ Route::get('/textbook/{textbook}/chat', 'TextbookController@addChat')->name('tex
 Route::get('/textbook/{textbook}', 'TextbookController@showTextbookDetail')->name('textbook.detail');
 Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
 Route::post('/textbook/category', 'TextbookController@checkCategory')->name('textbook.category');
+Route::post('/textbook/search', 'TextbookController@searchWord')->name('textbook.search');
 Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('textbook.favorite');
 Route::post('/textbook/{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('textbook.remove');
 

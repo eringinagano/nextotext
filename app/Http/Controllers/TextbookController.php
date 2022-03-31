@@ -116,6 +116,15 @@ class TextbookController extends Controller
         return view('textbooks/category')->with(['condition_textbooks' => $codition_textbooks]);
     }
     
+    public function searchWord(Request $request) {
+        $search_word = $request['search_word'];
+        $search_textbooks = Textbook::where('name', $search_word)
+                                  ->orWhere('author_name', $search_word)
+                                  ->get();
+                                  
+        return view('textbooks/search')->with(['search_textbooks' => $search_textbooks]);                          
+    }
+    
     public function addChat(Textbook $textbook, Message $message) {
         $user_id = Auth::id();
         
