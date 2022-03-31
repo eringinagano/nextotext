@@ -26,7 +26,7 @@
             <p>条件指定</p>
           </li>
           <li class="university-condition">
-            <input name="university_name" class="form-control" placeholder="大学名　例：山田大学">  
+            <input name="university_name" class="form-control" placeholder="大学名　例：山田大学">
           </li>
           <li class="input-wrapper">
             <select name="category_id" class="custom-select">
