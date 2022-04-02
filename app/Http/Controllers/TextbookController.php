@@ -8,6 +8,7 @@ use App\Author;
 use App\Textbook;
 use App\TextbookState;
 use App\Message;
+use App\Group;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Http\Requests\ConditionRequest;
@@ -127,10 +128,10 @@ class TextbookController extends Controller
         return view('textbooks/search')->with(['search_textbooks' => $search_textbooks]);                          
     }
     
-    public function addChat(Textbook $textbook, Message $message) {
+    public function addChat(Textbook $textbook, Group $group) {
         $user_id = Auth::id();
         
-        $message->create([
+        $group->create([
             'buyer_id' => $user_id,
             'seller_id' => $textbook->seller_id,
             'textbook_id'=> $textbook->id
