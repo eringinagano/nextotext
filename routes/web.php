@@ -43,7 +43,7 @@ Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteText
 Route::post('/textbook/{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('textbook.remove');
 
 Route::get('/message', 'MessageController@showMessages')->name('messages');
-Route::get('/message/{message}/detail', 'MessageController@showMessageDetail')->name('message.detail');
-Route::post('/message/{message}/detail', 'MessageController@postMessage')->name('message.post');
+Route::get('/message/{group}/detail', 'MessageController@showMessageDetail')->name('message.detail');
+Route::post('/message/{group}/detail', 'MessageController@postMessage')->name('message.post');
 
 Route::get('/home', 'HomeController@index')->name('home');

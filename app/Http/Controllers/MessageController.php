@@ -18,4 +18,23 @@ class MessageController extends Controller
                     
         return view('messages/index')->with(['groups' => $groups]);
     }
+    
+    public function showMessageDetail(Group $group, Message $message) {
+        
+        $message_infos = Message::where('group_id', $group->id)
+                               ->get();
+        
+        return view('messages/detail')->with(['group' => $group, 'message_infos' => $message_infos]);
+    }
+    
+    public function postMessage(Request $request, Group $group, Message $message) {
+        $message_content = $request['message'];
+        
+        $message->create([
+            'group_id' => $group->id,
+            'message' => $message_content,
+        ]);
+        
+        return redirect()->route('message.detail', $group->id);
+    }
 }
