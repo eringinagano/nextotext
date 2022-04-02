@@ -1,13 +1,11 @@
 .detail-container {
     margin-top: 5rem;
     font-family: 'Fredoka', sans-serif;
-    font-weight: bold;
 }
 
 .detail-title {
     font-size: 3rem;
     font-weight: bold;
-    letter-spacing: 0.3rem;
     text-align: center;
 }
 
@@ -30,12 +28,8 @@
     font-weight: bold;
 }
 
-.reserved {
-    color: red;
-}
-
 .detail-btn {
-    padding: 5px 20px;
+    padding: 0.5rem 2.5rem;
     font-size: 1rem;
-    margin-bottom: 25px;
-}
+    margin-bottom: 1.5rem;
+} 
