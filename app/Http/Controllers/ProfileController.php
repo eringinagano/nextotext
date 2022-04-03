@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\University;
 use App\Category;
+use Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -30,8 +31,9 @@ class ProfileController extends Controller
     }
     
     public function editProfile(Request $request) {
-        $img_name = $request->file('image')->getClientOriginalName();
-        $img_path = $request->file('image')->storeAs('',$img_name,'public');
+        $image = $request->file('image');
+        $path = Storage::disk('s3')->putFile('img', $image, 'public');
+        $img_path = Storage::disk('s3')->url($path);
         
         $user = Auth::user();
         $user->categories()->sync($request['category_id']);

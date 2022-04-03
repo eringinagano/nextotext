@@ -5,7 +5,7 @@
     <div class="detail-wrapper">
       <ul>
           <li>
-            <img src="{{ asset('storage/'.$textbook->image) }}" width="400px" height="400px">
+            <img src="{{$textbook->image }}" width="400px" height="400px">
           </li>
           <li class="detail-text">
             <p>タイトル：{{ $textbook->name }}</p>

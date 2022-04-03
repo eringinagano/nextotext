@@ -5,7 +5,7 @@
     <div class="profile-wrapper">
         <ul>
             <li>
-                <img src="{{ asset('storage/'.$user->image) }}" class="profile-img">
+                <img src="{{ $user->image }}" class="profile-img">
             </li>
             <li class="text-wrapper">
                 <dl>
@@ -37,7 +37,7 @@
             @foreach($user->sellBooks as $sellbook)
             <li>
               <a href="/">
-                <img src="{{ asset('storage/'.$sellbook->image) }}">
+                <img src="{{ $sellbook->image }}">
               </a>
             </li>  
             @endforeach
