@@ -45,7 +45,7 @@
       <ul>
         @foreach($textbooks as $textbook)
         <li>
-          <img src="{{ asset('storage/'.$textbook->image) }}" width="200px" height="200px">
+          <img src="{{ $textbook->image }}" width="200px" height="200px">
           <div class="text-wrapper">
               <p>タイトル：{{ $textbook->name }}</p>
               <p>カテゴリー：{{ $textbook->category->name}}</p>

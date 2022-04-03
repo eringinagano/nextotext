@@ -10,6 +10,7 @@ use App\TextbookState;
 use App\Message;
 use App\Group;
 use Carbon\Carbon;
+use Storage;
 use Illuminate\Http\Request;
 use App\Http\Requests\ConditionRequest;
 use App\Http\Requests\SearchRequest;
@@ -24,8 +25,9 @@ class TextbookController extends Controller
     }
     
     public function postTextbookForm(Textbook $textbook, Request $request) {
-        $img_name = $request->file('image')->getClientOriginalName();
-        $img_path = $request->file('image')->storeAs('',$img_name,'public');
+        $image = $request->file('image');
+        $path = Storage::disk('s3')->putFile('img', $image, 'public');
+        $img_path = Storage::disk('s3')->url($path);
         
         $user_id = Auth::id();
         $user = Auth::user();

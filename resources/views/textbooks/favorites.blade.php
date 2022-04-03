@@ -6,7 +6,7 @@
       <ul>
         @foreach($user->favoriteTextbooks as $favoriteTextbook)
         <li>
-          <img src="{{ asset('storage/'.$favoriteTextbook->image) }}" width="200px" height="200px">
+          <img src="{{ $favoriteTextbook->image }}" width="200px" height="200px">
           <div class="text-wrapper">
               <p>タイトル：{{ $favoriteTextbook->name }}</p>
               <p>カテゴリー：{{ $favoriteTextbook->category->name}}</p>
