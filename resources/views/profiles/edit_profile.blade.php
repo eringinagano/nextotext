@@ -5,17 +5,17 @@
     <form action="{{ route('profile.edit') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="profile-wrapper">
-            <dl>
-                <dt>ユーザーネーム</dt>
-                <dd>
-                    <input class="form-control" type="text" name="name" placeholder="{{$user->name}}" value="{{ $user->name }}"/>
-                    @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </dd>
-            </dl>
+            <!--<dl>-->
+            <!--    <dt>ユーザーネーム</dt>-->
+            <!--    <dd>-->
+            <!--        <input class="form-control" type="text" name="name" placeholder="{{$user->name}}" value="{{ $user->name }}"/>-->
+            <!--        @error('name')-->
+            <!--            <span class="invalid-feedback" role="alert">-->
+            <!--                <strong>{{ $message }}</strong>-->
+            <!--            </span>-->
+            <!--        @enderror-->
+            <!--    </dd>-->
+            <!--</dl>-->
             <dl>
                 <dt>大学名　※フルネームで入力してください　例：山田大学</dt>
                 <dd>
@@ -37,22 +37,22 @@
                     </select>
                 </dd>
             </dl>
-            <dl>
-                <dt>プロフィール画像</dt>
-                <dd>
-                    <div class="form-group">
-                        <div class="custom-file">
-                          <input type="file" class="custom-file-input" id="inputFile" name="image">
-                          <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択</label>
-                        </div>
-                     </div>
-                    @error('image')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                </dd>
-            </dl>
+            <!--<dl>-->
+            <!--    <dt>プロフィール画像</dt>-->
+            <!--    <dd>-->
+            <!--        <div class="form-group">-->
+            <!--            <div class="custom-file">-->
+            <!--              <input type="file" class="custom-file-input" id="inputFile" name="image">-->
+            <!--              <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択</label>-->
+            <!--            </div>-->
+            <!--         </div>-->
+            <!--        @error('image')-->
+            <!--            <span class="invalid-feedback" role="alert">-->
+            <!--                <strong>{{ $message }}</strong>-->
+            <!--            </span>-->
+            <!--        @enderror-->
+            <!--    </dd>-->
+            <!--</dl>-->
         </div>
         <div class="btn-wrapper">
             <input type="submit" class="btn btn-success edit-btn" value="更新"></a>
