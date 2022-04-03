@@ -31,17 +31,12 @@ class ProfileController extends Controller
     }
     
     public function editProfile(Request $request) {
-        $image = $request->file('image');
-        $path = Storage::disk('s3')->putFile('img', $image, 'public');
-        $img_path = Storage::disk('s3')->url($path);
         
         $user = Auth::user();
         $user->categories()->sync($request['category_id']);
         
         $user->update([
-            'name' => $request['name'],
             'university_name' => $request['university_name'],
-            'image' => $img_path
         ]);
         
         return redirect( route('profile') );
