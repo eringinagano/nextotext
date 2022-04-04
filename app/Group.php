@@ -11,11 +11,11 @@ class Group extends Model
         'textbook_id' ,'seller_id', 'buyer_id',
     ];
     
-    public function Textbook() {
+    public function textbook() {
         return $this->belongsTo('App\Textbook');
     }
     
-    public function Messages() {
+    public function messages() {
         return $this->hasMany('App\Message');
     }
 }

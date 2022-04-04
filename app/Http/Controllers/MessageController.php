@@ -20,11 +20,12 @@ class MessageController extends Controller
     }
     
     public function showMessageDetail(Group $group, Message $message) {
+        $user_id = Auth::id();
         
         $message_infos = Message::where('group_id', $group->id)
                                ->get();
         
-        return view('messages/detail')->with(['group' => $group, 'message_infos' => $message_infos]);
+        return view('messages/detail')->with(['group' => $group, 'user_id' => $user_id, 'message_infos' => $message_infos]);
     }
     
     public function postMessage(Request $request, Group $group, Message $message) {
