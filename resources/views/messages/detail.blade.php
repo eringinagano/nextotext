@@ -3,11 +3,30 @@
 <div class="container message-container">
     <div class="message-wrapper">
         @foreach($message_infos as $message_info)
-          <p>{{ $message_info->message }}</p>
+          @if($user_id === $message_info->group->seller_id)
+            <div class="balloon6">
+                <div class="faceicon">
+                  <img src="{{ $message_info->group->textbook->sellBook->image }}">
+                </div>
+                <div class="chatting">
+                  <div class="says">
+                    <p>{{ $message_info->message }}</p>
+                  </div>
+                </div>
+            </div>
+          @else
+            <div class="mycomment">
+                <p>
+                {{ $message_info->message }}
+                </p>
+            </div>
+          @endif
         @endforeach
     </div>
+</div>
+<div class="input-wrapper">
     <form action="/message/{{ $group->id }}/detail" method="POST">
-        @csrf
+    @csrf
         <ul>
             <li class="message">
                 <input class="form-control" name="message">
@@ -16,6 +35,6 @@
                 <input type="submit" value="送信" class="btn btn-outline-success">
             </li>
         </ul>
-    </form>
+   </form>
 </div>
 @endsection 

@@ -11,7 +11,7 @@ class Message extends Model
         'group_id', 'message',
     ];
     
-    public function Group() {
+    public function group() {
         return $this->belongsTo('App\Group');
     }
 }
