@@ -44,14 +44,18 @@ class TextbookController extends Controller
             'seller_id' => $user->id,
             'textbook_state_id' => $request['textbook_state_id'],
             'date_time' => $date,
+            'is_booked' => 0
         ]);
         
         return redirect(route('textbook.index'));
         
     }
     
-    public function showTextbooks(Textbook $textbook, Category $category) {
-        return view('textbooks/index')->with(['textbooks' => $textbook->get(), 'categories' => $category->get()]);
+    public function showTextbooks(Category $category) {
+        $textbooks = Textbook::where('is_booked', false)
+                             ->get();
+        
+        return view('textbooks/index')->with(['textbooks' => $textbooks, 'categories' => $category->get()]);
     }
     
     public function showTextbookDetail(Textbook $textbook) {
@@ -132,6 +136,10 @@ class TextbookController extends Controller
     
     public function addChat(Textbook $textbook, Group $group) {
         $user_id = Auth::id();
+        
+        $textbook->update([
+          'is_booked' => 1
+        ]);
         
         $group->create([
             'buyer_id' => $user_id,

@@ -9,7 +9,7 @@ class Textbook extends Model
 {
     //
     protected $fillable = [
-        'image','name', 'author_name', 'category_id', 'textbook_state_id', 'seller_id', 'university_id', 'date_time', 'reservation_id',
+        'image','name', 'author_name', 'category_id', 'textbook_state_id', 'seller_id', 'university_id', 'date_time', 'reservation_id', 'is_booked',
     ];
     
     public function category() {

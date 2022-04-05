@@ -24,6 +24,7 @@ class CreateTextbooksTable extends Migration
             $table->integer('seller_id')->unsigned();
             $table->integer('reservation_id')->nullable()->unsigned();
             $table->integer('textbook_state_id')->unsigned();
+            $table->boolean('is_booked');
             $table->timestamps();
         });
     }
