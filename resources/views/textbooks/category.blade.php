@@ -6,7 +6,7 @@
       <ul>
         @foreach($condition_textbooks as $condition_textbook)
         <li>
-          <img src="{{ asset('storage/'.$condition_textbook->image) }}" width="200px" height="200px">
+          <img src="{{ $condition_textbook->image }}" width="200px" height="200px">
           <div class="text-wrapper">
               <p>タイトル：{{ $condition_textbook->name }}</p>
               <p>カテゴリー：{{ $condition_textbook->category->name }}</p>
