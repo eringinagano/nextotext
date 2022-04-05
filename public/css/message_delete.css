@@ -1,0 +1,26 @@
+.note {
+    margin-top: 9rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.review-wrapper {
+    margin: 3rem auto 0;
+    width: 70%;
+}
+
+.btn-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-wrapper .btn-outline-info:hover {
+    color: #fff;
+    background-color: #6cb2eb;
+    border-color: #6cb2eb;
+}
+
+.review-wrapper textarea {
+    height: 10rem;
+}

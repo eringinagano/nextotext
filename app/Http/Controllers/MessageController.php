@@ -40,4 +40,8 @@ class MessageController extends Controller
         
         return redirect()->route('message.detail', $group->id);
     }
+    
+    public function showDeleteForm() {
+        return view('messages/delete');
+    }
 }
