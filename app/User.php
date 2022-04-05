@@ -54,8 +54,12 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Textbook');
     }
     
-    public function Group() {
+    public function group() {
         return $this->hasOne('App\Group');
+    }
+    
+    public function messages() {
+        return $this->hasMany('App\Message', 'sender_id');
     }
     
 }

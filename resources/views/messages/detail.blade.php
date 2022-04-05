@@ -1,28 +1,26 @@
 @extends('layouts.message_detail_header')
 @section('content')
-<div class="container message-container">
-    <div class="message-wrapper">
-        @foreach($message_infos as $message_info)
-          @if($user_id === $message_info->group->seller_id)
-            <div class="balloon6">
-                <div class="faceicon">
-                  <img src="{{ $message_info->group->textbook->sellBook->image }}">
-                </div>
-                <div class="chatting">
-                  <div class="says">
-                    <p>{{ $message_info->message }}</p>
-                  </div>
-                </div>
+<div class="line-bc">
+    @foreach($message_infos as $message_info)
+      @if(!$user_id === $message_info->sender_id)
+        <div class="balloon6">
+            <div class="faceicon">
+              <img src="{{ $message_info->user->image }}">
             </div>
-          @else
-            <div class="mycomment">
-                <p>
-                {{ $message_info->message }}
-                </p>
+            <div class="chatting">
+              <div class="says">
+                <p>{{ $message_info->message }}</p>
+              </div>
             </div>
-          @endif
-        @endforeach
-    </div>
+        </div>
+      @else
+        <div class="mycomment">
+            <p>
+            {{ $message_info->message }}
+            </p>
+        </div>
+      @endif
+    @endforeach
 </div>
 <div class="input-wrapper">
     <form action="/message/{{ $group->id }}/detail" method="POST">

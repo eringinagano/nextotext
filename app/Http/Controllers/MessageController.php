@@ -29,10 +29,12 @@ class MessageController extends Controller
     }
     
     public function postMessage(Request $request, Group $group, Message $message) {
+        $user_id = Auth::id();
         $message_content = $request['message'];
         
         $message->create([
             'group_id' => $group->id,
+            'sender_id' => $user_id,
             'message' => $message_content,
         ]);
         
