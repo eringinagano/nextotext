@@ -1,12 +1,12 @@
-.message-container {
-    margin-top: 6rem;
-    width: 100%;
+/*.message-container {*/
+/*    margin-top: 6rem;*/
+/*    width: 100%;*/
+/*}*/
+.line-bc {
+  text-align: right;
+  width: 80%;
 }
 
-.message-wrapper {
-    margin: 0 auto 10rem;
-    width: 80%;
-}
 
 .balloon6 {
   width: 100%;
