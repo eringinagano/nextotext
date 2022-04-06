@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Message;
 use App\Group;
+use App\Textbook;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -41,7 +42,21 @@ class MessageController extends Controller
         return redirect()->route('message.detail', $group->id);
     }
     
-    public function showDeleteForm() {
-        return view('messages/delete');
+    public function showDeleteForm(Group $group) {
+        return view('messages/delete')->with(['group' => $group]);
+    }
+    
+    public function deleteChat(Request $request, Group $group) {
+        $review = $request['review'];
+        $textbook_id = $group->textbook_id;
+        $textbook = Textbook::where('id', $textbook_id);
+        
+        $textbook->update([
+            'review' => $review,
+        ]);
+        
+        $group->delete();
+        
+        return redirect(route('textbook.index'));
     }
 }

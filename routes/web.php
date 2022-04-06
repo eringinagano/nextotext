@@ -43,8 +43,9 @@ Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteText
 Route::post('/textbook/{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('textbook.remove');
 
 Route::get('/message', 'MessageController@showMessages')->name('messages');
-Route::get('/message/{group}/delete', 'MessageController@showDeleteForm');
 Route::get('/message/{group}/detail', 'MessageController@showMessageDetail')->name('message.detail');
+Route::get('/message/{group}/delete', 'MessageController@showDeleteForm');
 Route::post('/message/{group}/detail', 'MessageController@postMessage')->name('message.post');
+Route::post('/message/{group}/delete', 'MessageController@deleteChat')->name('message.delete');
 
 Route::get('/home', 'HomeController@index')->name('home');

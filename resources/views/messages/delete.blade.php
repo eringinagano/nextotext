@@ -2,7 +2,7 @@
 @section('content')
 <h3 class="note">最後に感謝の気持ちをレビューとして投稿者に伝えましょう！！</h3>
 <div class="review-wrapper">
-    <form action="" method="POST">
+    <form action="/message/{{ $group->id }}/delete" method="POST">
         @csrf
         <textarea name="review" class="form-control"></textarea>
         <div class="btn-wrapper">
