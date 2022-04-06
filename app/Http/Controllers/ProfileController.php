@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\User;
 use App\University;
 use App\Category;
+use App\Textbook;
 use Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -41,6 +42,10 @@ class ProfileController extends Controller
         
         return redirect( route('profile') );
         
+    }
+    
+    public function showSellbookDetail(Textbook $textbook) {
+        return view('/profiles/sellbook')->with(['textbook' => $textbook]);
     }
     
     

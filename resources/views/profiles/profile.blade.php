@@ -33,21 +33,14 @@
     </div>
     <div class="post-textbooks-wrapper">
         <h3 class="post-textbooks-title">出品した教科書</h3>
-        <ul>
+        <div class="flex">
             @foreach($user->sellBooks as $sellbook)
-            <li>
-              <a href="/">
-                <img src="{{ $sellbook->image }}">
-              </a>
-            </li>  
+              <a href="/profile/{{ $sellbook->id }}/detail"><img src="{{ $sellbook->image }}"></a>
             @endforeach
-        </ul>
+        </div>
     </div>
     <div class="btn-wrapper">
         <a href="{{ route('profile.edit') }}" type="button" class="btn btn-success edit-btn">編集</a>
     </div>
-</div>
-<div class="show-textbooks">
-    <a>購入した教科書</a
 </div>
 @endsection 

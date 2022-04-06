@@ -29,6 +29,7 @@ Route::get('/', function() {
 
 Route::get('/profile', 'ProfileController@showProfile')->name('profile');
 Route::get('/profile/edit', 'ProfileController@showEditProfile')->name('profile.edit');
+Route::get('/profile/{textbook}/detail', 'ProfileController@showSellbookDetail');
 Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
 
 Route::get('/textbook/index', 'TextbookController@showTextbooks')->name('textbook.index');
