@@ -12,7 +12,7 @@ class Group extends Model
     ];
     
     public function textbook() {
-        return $this->belongsTo('App\Textbook');
+        return $this->belongsTo('App\Textbook',);
     }
     
     public function messages() {

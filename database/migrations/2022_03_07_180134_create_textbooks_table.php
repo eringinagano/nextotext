@@ -19,7 +19,7 @@ class CreateTextbooksTable extends Migration
             $table->string('name', 100);
             $table->string('author_name', 100);
             $table->string('date_time');
-            $table->longText('review');
+            $table->longText('review')->nullable();
             $table->integer('category_id')->unsigned();
             $table->integer('buyer_id')->nullable()->unsigned();
             $table->integer('seller_id')->unsigned();
