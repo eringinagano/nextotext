@@ -1,0 +1,33 @@
+.sellbook-container {
+    margin-top: 5rem;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.detail-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.detail-wrapper {
+    margin-top: 50px;
+}
+
+.detail-wrapper ul {
+    display: flex;
+}
+
+.detail-wrapper li {
+    list-style: none;
+    width: 50%;
+}
+
+.detail-text p {
+    font-size: 1.4rem;
+    margin-bottom: 1.65rem;
+    font-weight: bold;
+}
+
+.detail-text .review-title {
+    margin-bottom: 1rem;
+}
