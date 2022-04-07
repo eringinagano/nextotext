@@ -4,7 +4,7 @@
     <h2 class="profile-title">Profile</h2>
     <div class="profile-wrapper">
         <ul>
-            <li>
+            <li class="image">
                 <img src="{{ $user->image }}" class="profile-img">
             </li>
             <li class="text-wrapper">
@@ -32,7 +32,7 @@
         </ul>
     </div>
     <div class="post-textbooks-wrapper">
-        <h3 class="post-textbooks-title">出品した教科書</h3>
+        <h3 class="post-textbooks-title">出品中・出品済みの教科書</h3>
         <div class="flex">
             @foreach($user->sellBooks as $sellbook)
               <a href="/profile/{{ $sellbook->id }}/detail"><img src="{{ $sellbook->image }}"></a>

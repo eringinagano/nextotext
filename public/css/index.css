@@ -1,90 +1,71 @@
 .index-container {
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 90px;
     font-family: 'Fredoka', sans-serif;
     font-weight: bold;
 }
 
 .index-title {
-    font-size: 3rem;
+    font-size: 50px;
     font-weight: bold;
-    letter-spacing: 0.3rem;
+    letter-spacing: 4px;
 }
 
-.search-wrapper {
-    font-size: 1.2rem;
-    margin-top: 3rem;
-    margin-right: 3.5rem;
+.right-wrapper {
+    text-align: right;
+    margin-top: 50px;
 }
 
-.search-wrapper ul {
+.index-container form {
+    display: inline-block;
+}
+
+.right-wrapper ul {
     display: flex;
 }
 
-.search-wrapper li {
-    width: 20%;
+.right-wrapper li {
     list-style: none;
+    margin-left: 20px;
 }
 
-.search-wrapper .search-word {
-    width: 40%;
+.right-wrapper .text {
+    font-size: 17px;
+    line-height: 2.2;
 }
 
-.condition-wrapper {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-}
-
-.condition-wrapper ul {
-    display: flex;
-}
-
-.condition-wrapper li {
-    list-style: none;
-}
-
-.input-text {
-    margin-top: 0.3rem;
-    margin-right: 1.2rem;
-    margin-left: 33rem;
-}
-
-.university-condition {
-    margin-right: 1rem;
-}
-
-.condition-wrapper p {
-    font-size: 1.2rem;
-}
-
-.input-wrapper {
-    margin-right: 1.2rem;
+.index-wrapper {
+    margin-top: 30px;
 }
 
 .index-wrapper ul {
     display: flex;
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
 }
 
 .index-wrapper li {
     width: 25%;
     list-style: none;
-    margin-bottom: 2.5rem;
+    margin-bottom: 45px;
+}
+
+.index-wrapper img {
+    width: 200px;
+    height: 200px;
 }
 
 .text-wrapper {
+    width: 75%;
     text-align: left;
-    margin-top: 0.5rem;
-    margin-left: 2rem;
-    margin-bottom: 0.7rem;
+    margin: 13px auto;
 }
 
 .text-wrapper p {
-    margin-bottom: 0.1rem;
+    margin-bottom: 5px;
 }
 
 .index-btn {
-    padding: 0.2rem 2.5rem;
-    font-size: 1rem;
+    padding: 5px 50px;
+    font-size: 16px;
     cursor: pointer;
 }

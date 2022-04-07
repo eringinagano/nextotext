@@ -1,49 +1,57 @@
 .profile-container {
-    margin-top: 5rem;
+    margin-top: 70px;
     font-family: 'Fredoka', sans-serif;
 }
 
 .profile-title {
-    font-size: 3rem;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 0.3rem;
+    letter-spacing: 4px;
 }
 
 .profile-wrapper {
-    margin: 40px auto 30px;
+    margin: 60px auto 30px;
+    font-weight: bold;
+    text-align: left;
     width: 80%;
 }
 
 .profile-wrapper ul {
     display: flex;
+    justify-content: space-around;
 }
 
 .profile-wrapper li {
     list-style: none;
 }
 
+.profile-wrapper .image {
+    margin-top: 16px;
+}
+
 .profile-wrapper .profile-img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    margin-right: 10rem;
 }
 
 .profile-wrapper dt {
-    font-size: 1.5rem;
+    font-size: 18px;
+    letter-spacing: 2px;
 }
 
 .profile-wrapper dd {
-    font-size: 1.2rem;
+    font-size: 25px;
+    letter-spacing: 1px;
 }
 
 .university_null {
-    margin-bottom: 2rem;
+    margin-bottom: 35px;
 }
 
 .text-wrapper {
-    margin-top: 0.7rem;
+    margin-top: 14px;
 }
 
 .btn-wrapper {
@@ -52,13 +60,13 @@
 
 .edit-btn {
     padding: 7px 20px;
-    font-size: 1.2rem;
+    font-size: 20px;
     cursor: pointer;
 }
 
 .post-textbooks-wrapper {
     width: 80%;
-    margin: 2rem auto;
+    margin: 35px auto;
     border-top: solid 1px;
     border-top-color: silver;
 }
@@ -66,22 +74,21 @@
 .post-textbooks-title {
     text-align: center;
     font-weight: bold;
-    font-size: 1.3rem;
-    margin-top: 2rem;
+    font-size: 23px;
+    margin-top: 35px;
 }
 
 .flex {
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    margin: 2.5rem auto 0;
+    margin: 50px auto 0;
 }
 
 .flex a {
     list-style: none;
-    width: 24%;
-    margin-bottom: 1rem;
+    width: 25%;
+    margin-bottom: 21px;
 }
 
 .flex a img {

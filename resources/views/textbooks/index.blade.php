@@ -2,12 +2,12 @@
 @section('content')
 <div class="container index-container">
     <h2 class="index-title">Textbooks</h2>
-    <form action="{{ route('textbook.search') }}" method="POST">
+    <div class="right-wrapper">
+      <form action="{{ route('textbook.search') }}" method="POST">
       @csrf
-      <div class="search-wrapper">
         <ul>
-          <li class="input-text">
-            <p>フリーワード</p>
+          <li>
+            <p class="text">フリーワード</p>
           </li>
           <li class="search-word">
             <input name="search_word" class="form-control" placeholder="著者名・タイトル名">  
@@ -16,14 +16,12 @@
             <input type="submit" class="btn btn-outline-success" value="検索">
           </li>
         </ul>
-      </div>
-    </form>
-    <form action="{{ route('textbook.category') }}" method="POST">
+      </form><br>
+      <form action="{{ route('textbook.category') }}" method="POST">
       @csrf    
-      <div class="condition-wrapper">
         <ul>
-          <li class="input-text">
-            <p>条件指定</p>
+          <li>
+            <p class="text">条件指定</p>
           </li>
           <li class="university-condition">
             <input name="university_name" class="form-control" placeholder="大学名　例：山田大学">
@@ -39,13 +37,13 @@
             <input type="submit" class="btn btn-outline-success" value="検索">
           </li>
         </ul>
-      </div>
-    </form>
+      </form>
+    </div>
     <div class="index-wrapper">
       <ul>
         @foreach($textbooks as $textbook)
         <li>
-          <img src="{{ $textbook->image }}" width="200px" height="200px">
+          <img src="{{ $textbook->image }}">
           <div class="text-wrapper">
               <p>タイトル：{{ $textbook->name }}</p>
               <p>カテゴリー：{{ $textbook->category->name}}</p>

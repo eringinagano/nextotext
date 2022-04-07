@@ -70,11 +70,12 @@
   display: inline-block;
   position: relative; 
   margin: 0 10px 0 0;
-  padding: 8px;
+  padding: 12px 14px 14px 16px;
   max-width: 250px;
   border-radius: 12px;
   background: #30e852;
   font-size: 17px;
+  text-align: left;
 }
 
 .mycomment p:after {
@@ -89,31 +90,36 @@
 }
 
 .input-wrapper {
-    border-top: 1px solid;
-    border-color: rgba(226,226,226,1);
+    background-color:rgba(219,219,219,0.8);
     position: fixed;
-    background-color: white;
-    padding: 60px 0 30px 0;
+    margin: auto;
+    text-align: center;
+    height: 158px;
     width: 100%;
     bottom: 0;
 }
 
-.input-wrapper ul {
+.input-wrapper .message-wrapper {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.input-wrapper form {
+    display: inline-block;
+}
+
+.input-wrapper .message-wrapper ul {
     display: flex;
-    margin: 0 auto 2rem;
+    text-align: center;
 }
 
 .input-wrapper li {
     list-style: none;
 }
 
-.input-wrapper .message {
-    margin-right: 1.4rem;
-    margin-left: 25rem;
-}
-
 .input-wrapper .message .chat-form {
     width: 400px;
     height: 40px;
+    margin-right: 16px;
     border-radius: 20px;
 }
