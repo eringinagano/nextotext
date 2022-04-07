@@ -6,7 +6,7 @@
       <ul class="list-group">
         @foreach($groups as $group)
           <li class="list-group-item">
-            {{ $group->textbook->sellBook->name }}({{ $group->textbook->name }})
+            {{ $group->textbook->sellBook->name }}（{{ $group->textbook->name }}）
             <a href="/message/{{ $group->id }}/detail" class="btn btn-outline-success message-btn">チャット</a>
             <a href="/message/{{ $group->id }}/delete" class="btn btn-outline-danger">終了</a>
           </li>

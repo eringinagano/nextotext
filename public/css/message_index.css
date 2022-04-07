@@ -14,11 +14,15 @@
 .message-wrapper {
     margin-top: 3rem;
     margin-left: 15rem;
-    width: 55%;
+    width: 60%;
 }
 
 .message-wrapper li {
     font-size: 1.2rem;
+}
+
+.message-wrapper .profile {
+    color: black;
 }
 
 .message-btn {
