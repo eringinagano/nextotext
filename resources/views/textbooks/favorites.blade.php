@@ -6,10 +6,11 @@
       <ul>
         @foreach($user->favoriteTextbooks as $favoriteTextbook)
         <li>
-          <img src="{{ $favoriteTextbook->image }}" width="200px" height="200px">
+          <img src="{{ $favoriteTextbook->image }}">
           <div class="text-wrapper">
               <p>タイトル：{{ $favoriteTextbook->name }}</p>
               <p>カテゴリー：{{ $favoriteTextbook->category->name}}</p>
+              <p>使用された大学：{{ $favoriteTextbook->sellBook->university_name }}</p>
           </div>
           <a href="/textbook/{{ $favoriteTextbook->id }}" class="btn btn-outline-success category-btn">詳細</a>
         </li>

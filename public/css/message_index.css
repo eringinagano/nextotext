@@ -12,9 +12,12 @@
 }
 
 .message-wrapper {
-    margin-top: 3rem;
-    margin-left: 15rem;
-    width: 60%;
+    width: 65%;
+    margin: 30px auto 0;
+}
+
+.message-wrapper ul {
+    margin: auto;
 }
 
 .message-wrapper li {
