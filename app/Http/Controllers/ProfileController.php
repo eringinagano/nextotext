@@ -27,20 +27,21 @@ class ProfileController extends Controller
         return view('profiles/profile')->with(['user' => $user, 'university' => $university]);
     }
     
-    public function showEditProfile(Category $category) {
-        return view('profiles/edit_profile')->with(['user' => Auth::user(), 'categories' => $category->get()]);
+    public function showEditProfile($id, Category $category) {
+        $user = User::where('id', $id)->first();
+        
+        return view('profiles/edit_profile')->with(['user' => $user, 'categories' => $category->get()]);
     }
     
-    public function editProfile(Request $request) {
-        
-        $user = Auth::user();
+    public function editProfile($id, Request $request) {
+        $user = User::where('id', $id)->first();
         $user->categories()->sync($request['category_id']);
         
         $user->update([
             'university_name' => $request['university_name'],
         ]);
         
-        return redirect( route('profile') );
+        return redirect('profile/'. $user->id);
         
     }
     

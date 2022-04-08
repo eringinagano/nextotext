@@ -27,10 +27,10 @@ Route::get('/', function() {
     return view('top');
 });
 
-Route::get('/profile/{id}', 'ProfileController@showProfile')->name('profile');
-Route::get('/profile/{id}/edit', 'ProfileController@showEditProfile')->name('profile.edit');
+Route::get('/profile/{id}', 'ProfileController@showProfile');
+Route::get('/profile/{id}/edit', 'ProfileController@showEditProfile');
 Route::get('/profile/{id}/detail', 'ProfileController@showSellbookDetail');
-Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
+Route::post('/profile/{id}/update', 'ProfileController@editProfile');
 
 Route::get('/textbook/index', 'TextbookController@showTextbooks')->name('textbook.index');
 Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textbook.post');
