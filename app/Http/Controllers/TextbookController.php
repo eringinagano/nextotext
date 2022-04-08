@@ -138,6 +138,7 @@ class TextbookController extends Controller
         $user_id = Auth::id();
         
         $textbook->update([
+          'buyer_id' => $user_id,
           'is_booked' => 1
         ]);
         
