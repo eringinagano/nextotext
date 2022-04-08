@@ -45,7 +45,8 @@ class ProfileController extends Controller
         
     }
     
-    public function showSellbookDetail(Textbook $textbook) {
+    public function showSellbookDetail($id) {
+        $textbook = Textbook::where('id', $id)->first();
         return view('/profiles/sellbook')->with(['textbook' => $textbook]);
     }
     
