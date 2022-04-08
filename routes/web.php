@@ -27,9 +27,9 @@ Route::get('/', function() {
     return view('top');
 });
 
-Route::get('/profile', 'ProfileController@showProfile')->name('profile');
-Route::get('/profile/edit', 'ProfileController@showEditProfile')->name('profile.edit');
-Route::get('/profile/{textbook}/detail', 'ProfileController@showSellbookDetail');
+Route::get('/profile/{id}', 'ProfileController@showProfile')->name('profile');
+Route::get('/profile/{id}/edit', 'ProfileController@showEditProfile')->name('profile.edit');
+Route::get('/profile/{id}/detail', 'ProfileController@showSellbookDetail');
 Route::post('/profile/edit', 'ProfileController@editProfile')->name('profile.edit');
 
 Route::get('/textbook/index', 'TextbookController@showTextbooks')->name('textbook.index');

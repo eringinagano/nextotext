@@ -16,6 +16,10 @@
     margin: 30px auto 0;
 }
 
+.message-wrapper .name {
+    color: black;
+}
+
 .message-wrapper ul {
     margin: auto;
 }

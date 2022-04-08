@@ -61,7 +61,7 @@
                                 <a class="nav-link" href="{{ route('messages') }}">チャット</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('profile') }}">プロフィール</a>
+                                <a class="nav-link" href="/profile/{{ Auth::user()->id }}">プロフィール</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('logout') }}"
