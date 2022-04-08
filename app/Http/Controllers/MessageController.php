@@ -17,7 +17,7 @@ class MessageController extends Controller
                            ->orWhere('buyer_id', '=', $user_id)
                            ->get();
                     
-        return view('messages/index')->with(['groups' => $groups]);
+        return view('messages/index')->with(['groups' => $groups, 'user_id' => $user_id]);
     }
     
     public function showMessageDetail(Group $group, Message $message) {
