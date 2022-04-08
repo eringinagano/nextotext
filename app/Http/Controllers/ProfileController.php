@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Auth;
 class ProfileController extends Controller
 {
     //
-    public function showProfile() {
-        $user = Auth::user();
+    public function showProfile($id) {
+        $user = User::where('id', $id)->first();
         
         $university = true;
         
-        if($user['university_name'] === NULL) {
+        if($user->university_name === NULL) {
             $university = false;
         } else {
             $university = true;
