@@ -50,5 +50,6 @@ Route::post('/message/{group}/detail', 'MessageController@postMessage')->name('m
 Route::post('/message/{group}/delete', 'MessageController@deleteChat')->name('message.delete');
 
 Route::get('/mylist', 'MyListController@showMyList');
+Route::get('/mylist/register', 'MyListController@showRegisterForm');
 
 Route::get('/home', 'HomeController@index')->name('home');

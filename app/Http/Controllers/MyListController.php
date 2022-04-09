@@ -8,6 +8,10 @@ class MyListController extends Controller
 {
     //
     public function showMyList() {
-        return view('mylist');
+        return view('mylists.mylist');
+    }
+    
+    public function showRegisterForm() {
+        return view('mylists.register');
     }
 }
