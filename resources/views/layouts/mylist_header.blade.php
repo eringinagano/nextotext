@@ -22,7 +22,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/top.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/mylist.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -44,12 +44,14 @@
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
                         @guest
-                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
-                            </li>
                             <li class="nav-item">
-                                <a href="{{ route('login',['provider' => 'line']) }}"><img src="../img/btn_login_base.png" class="line-btn"></a>
+                                <a class="nav-link" href="{{ route('login') }}">ログイン</a>
                             </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">登録</a>
+                                </li>
+                            @endif
                         @else
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
@@ -87,24 +89,7 @@
         </nav>
 
         <main class="py-4">
-            <div class="mainvisual">
-                <div class="title-wrapper">
-                    <h2 class="main-title">NextoText</h2>
-                    <p>あなたの教科書を次の世代へ</p>
-                </div>
-            </div>
-            <div class="about-wrapper">
-                <h2 class="about-title">Concept</h2>
-                <div class="text-wrapper">
-                    <p>
-                        大学生が4年間で教科書に費やす金額は10万円から30万円だと言われています。
-                        授業料や生活費などが必要とされる学生にとってそれらは少なくない出費となります。
-                        このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。
-                        「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。
-                    </p>
-                </div>
-                <a class="btn btn-outline-success about-btn" href="{{ route('textbook.index') }}">教科書一覧をみる</a>
-            </div>
+            @yield('content')
         </main>
     </div>
 </body>

@@ -27,7 +27,7 @@ class PostRequest extends FormRequest
             //
             'image' => 'required',
             'name' => 'required',
-            'author_name' => 'required'
+            'author_name' => 'required',
         ];
     }
 }

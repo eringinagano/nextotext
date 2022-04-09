@@ -1,6 +1,11 @@
 @extends('layouts.message_delete_header')
 @section('content')
 <h3 class="note">最後に感謝の気持ちをレビューとして投稿者に伝えましょう！！</h3>
+<div class="error-wrapper">
+@error('review')
+　　<li>{{$message}}</li>
+@enderror
+</div>
 <div class="review-wrapper">
     <form action="/message/{{ $group->id }}/delete" method="POST">
         @csrf
