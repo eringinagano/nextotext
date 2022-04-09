@@ -119,3 +119,17 @@
     margin-right: 16px;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 479px) {
+    .nav-item .btn {
+        padding: 2px 25px;
+    }
+    
+    .input-wrapper .message .chat-form {
+        width: 240px;
+    }
+    
+    .mycomment p {
+        font-size: 10px;
+    }
+}

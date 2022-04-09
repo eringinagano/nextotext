@@ -85,19 +85,21 @@
 
         <main class="py-4">
             <div class="mainvisual">
-                <div class="text-wrapper">
+                <div class="title-wrapper">
                     <h2 class="main-title">NextoText</h2>
                     <p>あなたの教科書を次の世代へ</p>
                 </div>
             </div>
             <div class="about-wrapper">
                 <h2 class="about-title">Concept</h2>
-                <p>
-                    大学生が4年間で教科書に費やす金額は10万円から30万円だと言われています。<br>
-                    授業料や生活費などが必要とされる学生にとってそれらは少なくない出費となります。<br>
-                    このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。<br>
-                    「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。<br>
-                </p>
+                <div class="text-wrapper">
+                    <p>
+                        大学生が4年間で教科書に費やす金額は10万円から30万円だと言われています。
+                        授業料や生活費などが必要とされる学生にとってそれらは少なくない出費となります。
+                        このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。
+                        「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。
+                    </p>
+                </div>
                 <a class="btn btn-outline-success about-btn" href="{{ route('textbook.index') }}">教科書一覧をみる</a>
             </div>
         </main>

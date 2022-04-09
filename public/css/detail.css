@@ -67,3 +67,39 @@
     font-size: 16px;
     margin-bottom: 20px;
 } 
+
+@media screen and (max-width: 479px) {
+    .nav-item .btn {
+        padding: 2px 25px;
+    }
+    
+    .detail-wrapper {
+        margin:90px auto 0;
+    }
+    
+    .detail-wrapper ul {
+        display: block;
+        padding: 0;
+    }
+    
+    .detail-wrapper .image img {
+        width: 300px;
+        height: 300px;
+    }
+    
+    .detail-text {
+        margin-top: 40px;
+    }
+    
+    .detail-text .large {
+        font-size: 24px;
+    }
+    
+    .detail-text .underline {
+        font-size: 14px;
+    }
+    
+    .detail-btn {
+        font-size: 14px;
+    }
+}

@@ -29,3 +29,22 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+@media screen and (max-width: 479px) {
+    .nav-item .btn {
+        padding: 2px 25px;
+    }
+    
+    .profile-wrapper {
+        width: 70%;
+        margin-top: 70px;
+    }
+    
+    .profile-wrapper dl {
+        margin-bottom: 40px;
+    }
+    
+    .profile-wrapper dt {
+        font-size: 16px;
+    }
+}

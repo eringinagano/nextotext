@@ -1,13 +1,13 @@
 .post-container {
-    margin-top: 5rem;
+    margin-top: 90px;
     font-family: 'Fredoka', sans-serif;
 }
 
 .post-title {
-    font-size: 3rem;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
-    letter-spacing: 0.3rem;
+    letter-spacing: 4px;
 }
 
 .post-wrapper {
@@ -16,7 +16,7 @@
 }
 
 .post-wrapper dt {
-    font-size: 1.1rem;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
@@ -26,6 +26,29 @@
 
 .post-btn {
     padding: 7px 20px;
-    font-size: 1.2rem;
+    font-size: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 479px) {
+    .nav-item .btn {
+        padding: 2px 25px;
+    }
+    
+    .post-title {
+        font-size: 40px;
+    }
+    
+    .post-wrapper {
+        width: 80%;
+    }
+    
+    .post-wrapper dl {
+        margin-bottom: 22px;
+    }
+    
+    .post-wrapper dt {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
 }

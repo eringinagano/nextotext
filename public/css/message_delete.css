@@ -1,18 +1,18 @@
 .note {
-    margin-top: 9rem;
+    margin-top: 150px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 25px;
     font-weight: bold;
 }
 
 .review-wrapper {
-    margin: 3rem auto 0;
+    margin: 50px auto 0;
     width: 70%;
 }
 
 .btn-wrapper {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 40px;
 }
 
 .btn-wrapper .btn-outline-info:hover {
@@ -22,5 +22,25 @@
 }
 
 .review-wrapper textarea {
-    height: 10rem;
+    height: 200px;
+}
+
+@media screen and (max-width: 479px) {
+    .nav-item .btn {
+        padding: 2px 25px;
+    }
+    
+    .note {
+        font-size: 12px;
+    }
+    
+    .review-wrapper {
+        width: 85%;
+    }
+    
+    .review-wrapper textarea {
+        height: 150px;
+    }
+    
+    
 }
