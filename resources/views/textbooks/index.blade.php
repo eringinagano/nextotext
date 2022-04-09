@@ -4,6 +4,14 @@
     <div class="title-wrapper">
       <h2 class="index-title">Textbooks</h2>
     </div>
+    <div class="error-wrapper">
+    @error('search_word')
+　　  <li>{{$message}}</li>
+    @enderror  
+    @error('university_name')
+　　  <li>{{$message}}</li>
+    @enderror
+    </div>
     <div class="right-wrapper">
       <form action="{{ route('textbook.search') }}" method="POST">
       @csrf
