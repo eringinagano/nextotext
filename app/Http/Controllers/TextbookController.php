@@ -12,6 +12,7 @@ use App\Group;
 use Carbon\Carbon;
 use Storage;
 use Illuminate\Http\Request;
+use App\Http\Requests\PostRequest;
 use App\Http\Requests\ConditionRequest;
 use App\Http\Requests\SearchRequest;
 use Illuminate\Support\Facades\Auth;
@@ -24,7 +25,7 @@ class TextbookController extends Controller
         return view('textbooks/post')->with(['categories' => $category->get(), 'textbookstates' => $textbookstate->get()]);
     }
     
-    public function postTextbookForm(Textbook $textbook, Request $request) {
+    public function postTextbookForm(Textbook $textbook, PostRequest $request) {
         $image = $request->file('image');
         $path = Storage::disk('s3')->putFile('img', $image, 'public');
         $img_path = Storage::disk('s3')->url($path);

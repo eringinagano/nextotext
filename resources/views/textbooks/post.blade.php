@@ -2,6 +2,17 @@
 @section('content')
 <div class="container post-container">
     <h2 class="post-title">Post</h2>
+    <div class="error-wrapper">
+    @error('image')
+　　  <li>{{$message}}</li>
+    @enderror  
+    @error('name')
+　　  <li>{{$message}}</li>
+    @enderror
+    @error('author_name')
+　　  <li>{{$message}}</li>
+    @enderror
+    </div>
     <form action="{{ route('textbook.post') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="post-wrapper">
