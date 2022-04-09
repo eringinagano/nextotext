@@ -8,10 +8,25 @@
     font-weight: bold;
     text-align: center;
     letter-spacing: 4px;
+    margin-bottom: 50px;
+}
+
+.error-wrapper {
+    text-align: left;
+    width: 45%;
+    margin: 0 auto;
+}
+
+.error-wrapper li {
+    list-style: none;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
 }
 
 .post-wrapper {
-    margin: 40px auto 30px;
+    margin: 10px auto 30px;
     width: 45%;
 }
 
