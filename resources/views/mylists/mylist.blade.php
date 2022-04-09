@@ -11,7 +11,7 @@
       </ol>
     </div>
     <div class="btn-wrapper">
-        <a href="/mylist/register" class="btn btn-outline-success mylist-btn">マイリスト追加</a>
+        <a href="/mylist/register" class="btn btn-outline-success mylist-btng">マイリスト追加</a>
     </div>
 </div>
 @endsection
