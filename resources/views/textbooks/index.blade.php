@@ -1,12 +1,14 @@
 @extends('layouts.textbook_index_header')
 @section('content')
 <div class="container index-container">
-    <h2 class="index-title">Textbooks</h2>
+    <div class="title-wrapper">
+      <h2 class="index-title">Textbooks</h2>
+    </div>
     <div class="right-wrapper">
       <form action="{{ route('textbook.search') }}" method="POST">
       @csrf
         <ul>
-          <li>
+          <li class="first">
             <p class="text">フリーワード</p>
           </li>
           <li class="search-word">
@@ -20,7 +22,7 @@
       <form action="{{ route('textbook.category') }}" method="POST">
       @csrf    
         <ul>
-          <li>
+          <li class="first">
             <p class="text">条件指定</p>
           </li>
           <li class="university-condition">

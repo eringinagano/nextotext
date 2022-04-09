@@ -12,7 +12,7 @@
 }
 
 .message-wrapper {
-    width: 65%;
+    width: 70%;
     margin: 30px auto 0;
 }
 
@@ -24,18 +24,64 @@
     margin: auto;
 }
 
-.message-wrapper li {
-    font-size: 1.2rem;
+.message-wrapper li p {
+    display: inline-block;
+    font-size: 16px;
+    margin: 0;
 }
 
-.message-wrapper .profile {
-    color: black;
+.message-wrapper li .name {
+    font-size: 18px;
 }
 
-.message-btn {
-    margin-left: 10rem;
+.message-wrapper li .message-btn {
+    font-size: 12px;
 }
+
+.message-wrapper li .finish-btn {
+    font-size: 12px;
+}
+
 
 .list-group-item {
     text-align: center;
+}
+
+@media screen and (max-width: 470px) {
+    .nav-item .btn {
+        padding: 2px 25px;
+    }
+    
+    .message-title {
+        font-size: 40px;
+    }
+    
+    .message-wrapper {
+        width: 90%;
+    }
+    
+    .message-wrapper li .name {
+        font-size: 12px;
+    }
+    
+    .message-wrapper li a {
+        font-size: 8px;
+    }
+    
+    .message-wrapper li p {
+        font-size: 8px;
+    }
+    
+    .message-wrapper li .message-btn {
+        margin: 0;
+        padding: 2px 4px;
+        font-size: 6px;
+    }
+    
+    .message-wrapper li .finish-btn {
+        padding: 2px 4px;
+        font-size: 6px;
+    }
+    
+    
 }

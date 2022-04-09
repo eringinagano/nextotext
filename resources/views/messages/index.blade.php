@@ -7,13 +7,15 @@
         @foreach($groups as $group)
           <li class="list-group-item">
             @if($user_id === $group->textbook->sellBook->id)
-              <a href="/profile/{{ $group->textbook->buyBook->id }}" class="name">{{ $group->textbook->buyBook->name }}</a>（{{ $group->textbook->name }}）
+              <a href="/profile/{{ $group->textbook->buyBook->id }}" class="name">{{ $group->textbook->buyBook->name }}</a>
+              <p>（{{ $group->textbook->name }}）</p>
               <a href="/message/{{ $group->id }}/detail" class="btn btn-outline-success message-btn">チャット</a>
-              <a href="/message/{{ $group->id }}/delete" class="btn btn-outline-danger">終了</a>
+              <a href="/message/{{ $group->id }}/delete" class="btn btn-outline-danger finish-btn">終了</a>
             @else
-              <a href="/profile/{{ $group->textbook->sellBook->id }}" class="name">{{ $group->textbook->sellBook->name }}</a>（{{ $group->textbook->name }}）
+              <a href="/profile/{{ $group->textbook->sellBook->id }}" class="name">{{ $group->textbook->sellBook->name }}</a>
+              <p>（{{ $group->textbook->name }}）</p>
               <a href="/message/{{ $group->id }}/detail" class="btn btn-outline-success message-btn">チャット</a>
-              <a href="/message/{{ $group->id }}/delete" class="btn btn-outline-danger">終了</a>
+              <a href="/message/{{ $group->id }}/delete" class="btn btn-outline-danger finish-btn">終了</a>
             @endif
           </li>
         @endforeach
