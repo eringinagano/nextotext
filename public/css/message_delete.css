@@ -1,12 +1,25 @@
 .note {
-    margin-top: 150px;
+    margin: 150px auto 40px;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
 }
 
+.error-wrapper {
+    text-align: left;
+    margin: 0 auto;
+    width: 70%;
+}
+
+.error-wrapper li {
+    list-style: none;
+    font-weight: bold;
+    color: red;
+    font-size: 14px;
+}
+
 .review-wrapper {
-    margin: 50px auto 0;
+    margin: 10px auto 0;
     width: 70%;
 }
 
