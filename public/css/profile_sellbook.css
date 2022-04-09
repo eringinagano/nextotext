@@ -13,7 +13,7 @@
 
 .detail-wrapper {
     margin-top: 100px;
-    width: 90%;
+    width: 100%;
 }
 
 .detail-wrapper ul {
@@ -23,15 +23,16 @@
 
 .detail-wrapper li {
     list-style: none;
+    width: 57%;
 }
 
 .detail-wrapper .image {
-    width: 50%;
+    width: 40%;
 }
 
 .detail-wrapper .image img {
-    width: 480px;
-    height: 480px;
+    width: 400px;
+    height: 400px;
 }
 
 .detail-text {
@@ -39,6 +40,9 @@
 }
 
 .detail-text p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     padding: 5px;
     font-size: 14px;
     margin-bottom: 1px;
@@ -46,13 +50,13 @@
 }
 
 .detail-text .large {
-    font-size: 40px;
+    font-size: 30px;
     border-bottom: 1px solid;
     border-color: rgba(196,196,196,1);
 }
 
 .detail-text .underline {
-    font-size: 18px;
+    font-size: 16px;
     border-bottom: 1px solid;
     border-color: rgba(196,196,196,1);
 }
@@ -77,6 +81,10 @@
     .detail-wrapper ul {
         display: block;
         padding: 0;
+    }
+    
+    .detail-wrapper li {
+        width: 100%;
     }
     
     .detail-wrapper .image img {

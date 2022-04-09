@@ -69,9 +69,13 @@
     width: 75%;
     text-align: left;
     margin: 13px auto;
+    font-size: 13px;
 }
 
 .text-wrapper p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin-bottom: 5px;
 }
 
