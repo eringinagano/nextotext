@@ -18,6 +18,7 @@
 
 .mylist-wrapper ul {
     margin: auto;
+    justify-content: space-between;
 }
 
 .mylist-wrapper .list-group-item p {
