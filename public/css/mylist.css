@@ -22,6 +22,7 @@ ol.mylist{
   font-size: 20px;
   padding:0;
 }
+
 ol.mylist li{
   position:relative;
   padding: 10px 0 10px 20px;
@@ -31,6 +32,7 @@ ol.mylist li{
   line-height: 30px;
   border-bottom: dashed 1px #2AE11F;
 }
+
 ol.mylist li:before{
   counter-increment: list;
   content: "";
@@ -49,7 +51,7 @@ ol.mylist li:before{
   transform: translateY(-50%);
 }
 
-ol.mylist li .title {
+ol.mylist li span {
     margin-right: 10px;
 }
 
