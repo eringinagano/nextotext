@@ -21,10 +21,12 @@ class MyListController extends Controller
     }
     
     public function addTextbook(MylistRequest $request, MyList $mylist) {
+        $user_id = Auth::id();
         $textbook_name = $request['textbook_name'];
         $author_name = $request['author_name'];
         
         $mylist->create([
+            'user_id' => $user_id,
             'textbook_name' => $textbook_name,
             'author_name' => $author_name,
         ]);
