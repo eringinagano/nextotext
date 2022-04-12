@@ -2,7 +2,7 @@
 @section('content')
 <div class="container mylist-container">
     <h2 class="mylist-title">My List</h2>
-    <form action="/mylist/register" method="POST">
+    <form action="{{ route('mylist.register') }}" method="POST">
         @csrf
         <div class="mylist-wrapper">
             <di>

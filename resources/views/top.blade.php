@@ -61,7 +61,7 @@
                                 <a class="nav-link" href="/mylist">マイリスト</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('messages') }}">チャット</a>
+                                <a class="nav-link" href="{{ route('message.index') }}">チャット</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/profile/{{ Auth::user()->id }}">プロフィール</a>

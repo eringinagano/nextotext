@@ -31,6 +31,6 @@ class MyListController extends Controller
             'author_name' => $author_name,
         ]);
         
-        return redirect(route('mylist'));
+        return redirect(route('mylist.index'));
     }
 }

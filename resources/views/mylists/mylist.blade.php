@@ -14,7 +14,7 @@
       </ul>
     </div>
     <div class="btn-wrapper">
-        <a href="/mylist/register" class="btn btn-outline-success mylist-btng">マイリスト追加</a>
+        <a href="{{ route('mylist.register') }}" class="btn btn-outline-success mylist-btng">マイリスト追加</a>
     </div>
 </div>
 @endsection
