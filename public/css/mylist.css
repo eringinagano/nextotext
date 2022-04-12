@@ -49,7 +49,7 @@ ol.mylist li:before{
   transform: translateY(-50%);
 }
 
-.mylist li .title {
+ol.mylist li .title {
     margin-right: 10px;
 }
 
