@@ -8,7 +8,7 @@ class MyList extends Model
 {
     //
     protected $fillable = [
-        'textbook_name', 'author_name'
+        'user_id', 'textbook_name', 'author_name'
     ];
     
     public function users() {
