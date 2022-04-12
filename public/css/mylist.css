@@ -20,13 +20,14 @@
     margin: auto;
 }
 
-.mylist-wrapper li p {
+.mylist-wrapper .list-group-item p {
     display: inline-block;
+    font-weight: bold;
     font-size: 16px;
     margin: 0;
 }
 
-.message-wrapper li .delete-btn {
+.mylist-wrapper li .delete-btn {
     font-size: 12px;
 }
 
