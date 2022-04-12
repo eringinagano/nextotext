@@ -21,6 +21,7 @@ ol.mylist{
   list-style-type:none;
   font-size: 20px;
   padding:0;
+  width: 70%;
 }
 
 ol.mylist li{
@@ -31,10 +32,6 @@ ol.mylist li{
   font-size: 20px;
   line-height: 30px;
   border-bottom: dashed 1px #2AE11F;
-}
-
-ol.mylist li span {
-    margin-right: 15px;
 }
 
 ol.mylist li:before{
