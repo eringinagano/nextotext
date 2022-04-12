@@ -1,11 +1,11 @@
-@extends('layouts.mylist_register_header')
+@extends('layouts.mylist_header')
 @section('content')
 <div class="container mylist-container">
     <h2 class="mylist-title">My List</h2>
     <div class="mylist-wrapper">
       <ol class="mylist">
       @foreach( $user->mylists as $mylist)  
-        <li>{{ $mylist->textbook_name }}{{ $mylist->author_name }}</li>
+        <li><span class="title">タイトル：{{ $mylist->textbook_name }}</span>著者{{ $mylist->author_name }}</li>
       @endforeach  
       </ol>
     </div>

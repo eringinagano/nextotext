@@ -49,6 +49,10 @@ ol.mylist li:before{
   transform: translateY(-50%);
 }
 
+.mylist li .title {
+    margin-right: 10px;
+}
+
 .btn-wrapper {
     text-align: center;
     margin-top: 40px;
