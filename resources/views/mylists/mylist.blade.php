@@ -5,7 +5,7 @@
     <div class="mylist-wrapper">
       <ol class="mylist">
       @foreach( $user->mylists as $mylist)  
-        <li><span class="title">タイトル：{{ $mylist->textbook_name }}</span>著者：{{ $mylist->author_name }}</li>
+        <li><span>タイトル：{{ $mylist->textbook_name }}</span>著者：{{ $mylist->author_name }}</li>
       @endforeach  
       </ol>
     </div>
