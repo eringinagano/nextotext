@@ -11,6 +11,8 @@
 |
 */
 
+// Route::get('/home', 'HomeController@index')->name('home');
+
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -27,30 +29,36 @@ Route::get('/', function() {
     return view('top');
 });
 
-Route::get('/profile/{id}', 'ProfileController@showProfile');
-Route::get('/profile/{id}/edit', 'ProfileController@showEditProfile');
-Route::get('/profile/{id}/detail', 'ProfileController@showSellbookDetail');
-Route::post('/profile/{id}/update', 'ProfileController@editProfile');
+Route::group(['prefix' => 'profile'], function() {
+    Route::get('{id}', 'ProfileController@showProfile');
+    Route::get('{id}/edit', 'ProfileController@showEditProfile');
+    Route::get('{id}/detail', 'ProfileController@showSellbookDetail');
+    Route::post('{id}/update', 'ProfileController@editProfile');
+});
 
-Route::get('/textbook/index', 'TextbookController@showTextbooks')->name('textbook.index');
-Route::get('/textbook/post', 'TextbookController@showTextbookForm')->name('textbook.post');
-Route::get('/textbook/favorites', 'TextbookController@showFavorites')->name('textbook.favorites');
-Route::get('/textbook/{textbook}/chat', 'TextbookController@addChat')->name('textbook.chat');
-Route::get('/textbook/{textbook}', 'TextbookController@showTextbookDetail')->name('textbook.detail');
-Route::post('/textbook/post', 'TextbookController@postTextbookForm')->name('textbook.post');
-Route::post('/textbook/category', 'TextbookController@checkCategory')->name('textbook.category');
-Route::post('/textbook/search', 'TextbookController@searchWord')->name('textbook.search');
-Route::post('/textbook/{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('textbook.favorite');
-Route::post('/textbook/{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('textbook.remove');
+Route::group(['prefix' => 'textbook', 'as' => 'textbook.'], function() {
+    Route::get('index', 'TextbookController@showTextbooks')->name('index');
+    Route::get('post', 'TextbookController@showTextbookForm')->name('post');
+    Route::get('favorites', 'TextbookController@showFavorites')->name('favorites');
+    Route::get('{textbook}', 'TextbookController@showTextbookDetail')->name('detail');
+    Route::get('{textbook}/chat', 'TextbookController@addChat')->name('chat');
+    Route::post('post', 'TextbookController@postTextbookForm')->name('post');
+    Route::post('category', 'TextbookController@checkCategory')->name('category');
+    Route::post('search', 'TextbookController@searchWord')->name('search');
+    Route::post('{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('favorite');
+    Route::post('{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('remove');
+});
 
-Route::get('/message', 'MessageController@showMessages')->name('messages');
-Route::get('/message/{group}/detail', 'MessageController@showMessageDetail')->name('message.detail');
-Route::get('/message/{group}/delete', 'MessageController@showDeleteForm');
-Route::post('/message/{group}/detail', 'MessageController@postMessage')->name('message.post');
-Route::post('/message/{group}/delete', 'MessageController@deleteChat')->name('message.delete');
+Route::group(['prefix' => 'message', 'as' => 'message.'], function() {
+    Route::get('/', 'MessageController@showMessages')->name('index');
+    Route::get('{group}/detail', 'MessageController@showMessageDetail')->name('detail');
+    Route::get('{group}/delete', 'MessageController@showDeleteForm');
+    Route::post('{group}/detail', 'MessageController@postMessage');
+    Route::post('{group}/delete', 'MessageController@deleteChat');
+});
 
-Route::get('/mylist', 'MyListController@showMyList')->name('mylist');
-Route::get('/mylist/register', 'MyListController@showRegisterForm');
-Route::post('/mylist/register', 'MyListController@addTextbook');
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['prefix' => 'mylist', 'as' => 'mylist.'], function() {
+   Route::get('/', 'MyListController@showMyList')->name('index');
+   Route::get('register', 'MyListController@showRegisterForm')->name('register');
+   Route::post('register', 'MyListController@addTextbook')->name('register');
+});

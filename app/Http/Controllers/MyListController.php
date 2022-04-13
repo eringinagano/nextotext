@@ -10,6 +10,13 @@ use Illuminate\Support\Facades\Auth;
 class MyListController extends Controller
 {
     //
+    private $mylist;
+    
+    public function __construct()
+    {
+        $this->mylist = new MyList();
+    }
+    
     public function showMyList() {
         $user = Auth::user();
         
@@ -25,12 +32,8 @@ class MyListController extends Controller
         $textbook_name = $request['textbook_name'];
         $author_name = $request['author_name'];
         
-        $mylist->create([
-            'user_id' => $user_id,
-            'textbook_name' => $textbook_name,
-            'author_name' => $author_name,
-        ]);
+        $mylist = $this->mylist->addMylist($user_id, $textbook_name, $author_name);
         
-        return redirect(route('mylist'));
+        return redirect(route('mylist.index'));
     }
 }

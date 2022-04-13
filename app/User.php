@@ -66,4 +66,15 @@ class User extends Authenticatable
         return $this->hasMany('App\MyList');
     }
     
+     public static function getProfileUser($id) {
+        return static::where('id', $id)->first();
+    }
+    
+    public function checkUniversity() {
+        if($this->university_name === NULL) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }

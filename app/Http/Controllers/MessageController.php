@@ -11,34 +11,37 @@ use Illuminate\Support\Facades\Auth;
 class MessageController extends Controller
 {
     //
+    private $message;
+    
+    public function __construct()
+    {
+        $this->message = new Message();
+    }
+    
     public function showMessages() {
         $user_id = Auth::id();
-        $groups = Group::where('seller_id', '=', $user_id )
-                           ->orWhere('buyer_id', '=', $user_id)
-                           ->get();
+        $groups = Group::searchGroup($user_id);
                     
         return view('messages/index')->with(['groups' => $groups, 'user_id' => $user_id]);
     }
     
     public function showMessageDetail(Group $group, Message $message) {
         $user_id = Auth::id();
+        $group_id = $group->id;
         
-        $message_infos = Message::where('group_id', $group->id)
-                               ->get();
+        $message_infos = Message::searchMessage($group_id);
         
         return view('messages/detail')->with(['group' => $group, 'user_id' => $user_id, 'message_infos' => $message_infos]);
     }
     
     public function postMessage(Request $request, Group $group, Message $message) {
+        $group_id = $group->id;
         $user_id = Auth::id();
         $message_content = $request['message'];
-        $message->create([
-            'group_id' => $group->id,
-            'sender_id' => $user_id,
-            'message' => $message_content,
-        ]);
         
-        return redirect()->route('message.detail', $group->id);
+        $message = $this->message->createMessage($group_id, $user_id, $message_content);
+        
+        return redirect()->route('message.detail', $group_id);
     }
     
     public function showDeleteForm(Group $group) {

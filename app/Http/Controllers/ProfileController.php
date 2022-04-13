@@ -14,42 +14,32 @@ class ProfileController extends Controller
 {
     //
     public function showProfile($id) {
-        $user = User::where('id', $id)->first();
+        $user = User::getProfileUser($id);
         
-        $university = true;
-        
-        if($user->university_name === NULL) {
-            $university = false;
-        } else {
-            $university = true;
-        }
+        $university = $user->checkUniversity();
         
         return view('profiles/profile')->with(['user' => $user, 'university' => $university]);
     }
     
     public function showEditProfile($id, Category $category) {
-        $user = User::where('id', $id)->first();
+        $user = User::getProfileUser($id);
         
         return view('profiles/edit_profile')->with(['user' => $user, 'categories' => $category->get()]);
     }
     
     public function editProfile($id, Request $request) {
-        $user = User::where('id', $id)->first();
+        $user = User::getProfileUser($id);
         $user->categories()->sync($request['category_id']);
         
         $user->update([
             'university_name' => $request['university_name'],
         ]);
         
-        return redirect('profile/'. $user->id);
-        
+        return redirect('profile/'. $id);
     }
     
     public function showSellbookDetail($id) {
         $textbook = Textbook::where('id', $id)->first();
         return view('/profiles/sellbook')->with(['textbook' => $textbook]);
     }
-    
-    
-    
 }
