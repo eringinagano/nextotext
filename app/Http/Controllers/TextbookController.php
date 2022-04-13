@@ -34,19 +34,11 @@ class TextbookController extends Controller
         $user = Auth::user();
         
         $date = $request['date'];
-        
-        
-        
-        $textbook->create([
-            'image'=> $img_path,
-            'name' => $request['name'],
-            'author_name' => $request['author_name'],
-            'category_id' => $request['category_id'],
-            'seller_id' => $user->id,
-            'textbook_state_id' => $request['textbook_state_id'],
-            'date_time' => $date,
-            'is_booked' => 0
-        ]);
+        $name = $request['name'];
+        $author_name = $request['author_name'];
+        $category_id = $request['category_id'];
+        $textbook_state_id = $request['textbook_state_id'];
+        $textbook->addTextbook($img_path, $name, $author_name, $category_id, $user_id, $textbook_state_id, $date);
         
         return redirect(route('textbook.index'));
         
@@ -61,39 +53,15 @@ class TextbookController extends Controller
     
     public function showTextbookDetail(Textbook $textbook) {
         $user_id = Auth::id();
-        $textbook_id =$textbook->id;
         $user_infos = User::find($user_id);
-        
-        $favorite = false;
-        
-       foreach($user_infos->favoriteTextbooks as $user_info) {
-            if($user_info['id'] === $textbook_id) {
-                $favorite = true;
-                break;
-            } else {
-                $favorite = false;
-            }
-        }
+        $textbook_id =$textbook->id;
+        $favorite = $textbook->isFavorite($user_infos, $textbook_id);
         
         $now = new Carbon();
         $startdate = new Carbon($textbook->date_time);
-        $reservation = true;
+        $reservation = $textbook->checkReservation($now, $startdate);
         
-        if($now < $startdate ) {
-            $reservation = true;
-        } else {
-            $reservation = false;
-        }
-        
-        $reserved = false;
-        
-        if($textbook->reservation_id) {
-            $reserved = true;
-        } else {
-            $reserved = false;
-        }
-        
-        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation, 'reserved' => $reserved]);
+        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation]);
     }
     
     public function addFavoriteTextbook(Textbook $textbook) {
@@ -115,39 +83,28 @@ class TextbookController extends Controller
         return view('textbooks/favorites')->with(['user' => $user]);
     }
     
-    public function checkCategory(ConditionRequest $request) {
+    public function checkCategory(ConditionRequest $request, Builder $query) {
         $university_name = $request['university_name'];
         $category_id = $request['category_id'];
-        $codition_textbooks = Textbook::whereHas('sellBook', function (Builder $query) use ($university_name){
-                                $query->where('university_name', 'like', $university_name);})
-                                ->where('category_id', $category_id)
-                                ->get();
+        $condition_textbooks = Textbook::checkCondition($university_name, $category_id);
         
-        return view('textbooks/category')->with(['condition_textbooks' => $codition_textbooks]);
+        return view('textbooks/category')->with(['condition_textbooks' => $condition_textbooks]);
     }
     
     public function searchWord(SearchRequest $request) {
         $search_word = $request['search_word'];
-        $search_textbooks = Textbook::where('name', $search_word)
-                                  ->orWhere('author_name', $search_word)
-                                  ->get();
+        $search_textbooks = Textbook::checkWord($search_word);
                                   
         return view('textbooks/search')->with(['search_textbooks' => $search_textbooks]);                          
     }
     
     public function addChat(Textbook $textbook, Group $group) {
         $user_id = Auth::id();
+        $textbook_id = $textbook->id;
+        $seller_id = $textbook->seller_id;
         
-        $textbook->update([
-          'buyer_id' => $user_id,
-          'is_booked' => 1
-        ]);
-        
-        $group->create([
-            'buyer_id' => $user_id,
-            'seller_id' => $textbook->seller_id,
-            'textbook_id'=> $textbook->id
-        ]);
+        $textbook->updateTextbook($user_id);
+        $group->addGroup($user_id, $seller_id, $textbook_id);
         
         return redirect(route('message.index'));
     }
