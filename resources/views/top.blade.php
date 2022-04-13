@@ -25,87 +25,85 @@
     <link href="{{ asset('css/top.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="/">
-                    {{ config('app.name', 'NextoText') }}
+  <div id="app">
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          {{ config('app.name', 'NextoText') }}
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left Side Of Navbar -->
+          <ul class="navbar-nav mr-auto">
+          </ul>
+
+          <!-- Right Side Of Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            @guest
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('login',['provider' => 'line']) }}"><img src="../img/btn_login_base.png" class="line-btn"></a>
+              </li>
+            @else
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('textbook.favorites') }}">気になる教科書</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/mylist">マイリスト</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('message.index') }}">チャット</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/profile/{{ Auth::user()->id }}">プロフィール</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                    ログアウト
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="{{ route('login',['provider' => 'line']) }}"><img src="../img/btn_login_base.png" class="line-btn"></a>
-                            </li>
-                        @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('textbook.index') }}">教科書一覧</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('textbook.favorites') }}">気になる教科書</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/mylist">マイリスト</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('message.index') }}">チャット</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/profile/{{ Auth::user()->id }}">プロフィール</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();">
-                                    ログアウト
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                        @csrf
-                                </form>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-outline-success" href="{{ route('textbook.post') }}">出品</a>
-                            </li>
-
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main class="py-4">
-            <div class="mainvisual">
-                <div class="title-wrapper">
-                    <h2 class="main-title">NextoText</h2>
-                    <p>あなたの教科書を次の世代へ</p>
-                </div>
-            </div>
-            <div class="about-wrapper">
-                <h2 class="about-title">Concept</h2>
-                <div class="text-wrapper">
-                    <p>
-                        大学生が4年間で教科書に費やす金額は10万円から30万円だと言われています。
-                        授業料や生活費などが必要とされる学生にとってそれらは少なくない出費となります。
-                        このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。
-                        「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。
-                    </p>
-                </div>
-                <a class="btn btn-outline-success about-btn" href="{{ route('textbook.index') }}">教科書一覧をみる</a>
-            </div>
-        </main>
-    </div>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                  @csrf
+                </form>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-outline-success" href="{{ route('textbook.post') }}">出品</a>
+              </li>
+            @endguest
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="py-4">
+      <div class="mainvisual">
+        <div class="title-wrapper">
+          <h2 class="main-title">NextoText</h2>
+          <p>あなたの教科書を次の世代へ</p>
+        </div>
+      </div>
+      <div class="about-wrapper">
+        <h2 class="about-title">Concept</h2>
+        <div class="text-wrapper">
+          <p>
+            大学生が4年間で教科書に費やす金額は10万円から30万円だと言われています。
+            授業料や生活費などが必要とされる学生にとってそれらは少なくない出費となります。
+            このサービスでは使い終わった教科書を無償で受け取ること、提供することが可能です。
+            「少しでも学生の経済面をサポートしたい」そんな思いでこのサービスを作りました。
+          </p>
+        </div>
+        <a class="btn btn-outline-success about-btn" href="{{ route('textbook.index') }}">教科書一覧をみる</a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
