@@ -28,7 +28,7 @@
         </dl>
       </div>
       <div class="btn-wrapper">
-        <input type="submit" class="btn btn-success edit-btn" value="更新">
+        <input type="submit" class="btn btn-outline-success edit-btn" value="更新">
       </div>
   </form>    
 </div>

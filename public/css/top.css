@@ -48,7 +48,8 @@
 }
 
 .about-btn {
-    padding: 10px 18px;
+    padding: 10px 30px;
+    border-radius: 30px;
     margin-bottom: 40px;
     font-size: 18px;
     letter-spacing: 2px;
@@ -65,7 +66,7 @@
     
     .about-wrapper {
         padding-top: 40px;
-        padding-bottom: 60px;
+        padding-bottom: 40px;
         width: 80%;
     }
     
@@ -76,11 +77,12 @@
     
     .about-wrapper p {
         font-size: 15px;
-        line-height: 2;
+        line-height: 2.2;
     }
     
     .about-btn {
-        padding: 5px 15px;
+        padding: 6px 26px;
+        border-radius: 15px;
         margin-bottom: 40px;
         font-size: 12px;
         letter-spacing: 2px;
