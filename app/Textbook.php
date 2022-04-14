@@ -81,7 +81,7 @@ class Textbook extends Model
             'seller_id' => $user_id,
             'textbook_state_id' => $textbook_state_id,
             'date_time' => $date,
-            'is_booked' => 0
+            'is_booked' => false,
         ]);
     }
     
@@ -107,8 +107,16 @@ class Textbook extends Model
     public function updateTextbook($user_id) {
         $this->update([
           'buyer_id' => $user_id,
-          'is_booked' => 1
+          'is_booked' => true,
         ]);
+    }
+    
+    public function checkBook() {
+        if( $this->is_booked === 1 ) {
+            return true;
+        } else {
+            return false;
+        }
     }
     
     public static function checkCondition($university_name, $category_id) {
