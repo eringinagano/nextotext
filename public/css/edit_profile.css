@@ -25,8 +25,9 @@
 }
 
 .edit-btn {
-    padding: 7px 20px;
-    font-size: 1.2rem;
+    padding: 6px 80px;
+    border-radius: 25px;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -46,5 +47,11 @@
     
     .profile-wrapper dt {
         font-size: 16px;
+    }
+    
+    .edit-btn {
+        font-size: 12px;
+        padding: 6px 26px;
+        border-radius: 15px;
     }
 }

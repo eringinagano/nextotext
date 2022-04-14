@@ -38,18 +38,23 @@
 }
 
 .text-wrapper p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     margin-bottom: 5px;
 }
 
 .category-btn {
-    padding: 5px 50px;
+    padding: 5px 60px;
+    border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
 }
 
 .category-index-btn {
-    padding: 0.6rem 2.5rem;
-    margin-bottom: 2rem;
+    padding: 10px 26px;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 479px) {
@@ -76,5 +81,11 @@
     
     .text-wrapper p {
         font-size: 8px;
+    }
+    
+    .category-btn {
+        font-size: 12px;
+        padding: 3px 40px;
+        border-radius: 20px;
     }
 }

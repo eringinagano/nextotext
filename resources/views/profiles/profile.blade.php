@@ -40,7 +40,7 @@
     </div>
   </div>
   <div class="btn-wrapper">
-    <a href="/profile/{{ $user->id }}/edit" type="button" class="btn btn-success edit-btn">編集</a>
+    <a href="/profile/{{ $user->id }}/edit" type="button" class="btn btn-outline-success edit-btn">編集</a>
   </div>
 </div>
 @endsection 

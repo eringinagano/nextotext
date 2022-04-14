@@ -19,7 +19,7 @@
       </dl>
     </div>
     <div class="btn-wrapper">
-      <input type="submit" class="btn btn-success edit-btn" value="マイリストに追加">
+      <input type="submit" class="btn btn-outline-success edit-btn" value="マイリストに追加">
     </div>
   </form>
 </div>
