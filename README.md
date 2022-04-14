@@ -1,78 +1,42 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
-
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# アプリ名
+ 
+NextoText
+ 
+# 概要
+ 
+Nextotextは大学生のための教科書受け渡しアプリです。このアプリでは使い終えた教科書を出品すること、受け取ることが可能です。
+ 
+# 作成背景
+ 
+日本において大学生が1年間に支払う授業料は約94万円と言われています（私立大学）。これはOECD加盟国の中でもアメリカ、オーストラリアに次ぐ金額です。これらに加え、日本の大学生は4年間に約30万円を教科書代として費やす必要があります。私の周りにはバイトに明け暮れ、まともな学生生活を送ることが出来ていない友人もいました。使い終えた教科書を次の世代にバトンとして渡すことで少しでも大学生の経済的負担を減らしたい。そんな思いでこのアプリを作成しました。
+ 
+# 開発環境
+ 
+言語   PHP  
+FW   Laravel  
+DB   MariaDB  
+OS   Linux  
+その他   AWS  
+ 
+# 機能
+ 
+・LINEログイン機能  
+・教科書出品機能  
+・教科書一覧表示  
+・教科書詳細表示機能  
+・プロフィール機能  
+・出身大学登録機能  
+・ユーザーの出品教科書一覧表示機能  
+・ユーザーの出品教科書詳細表示機能  
+・教科書検索機能  
+・チャット機能  
+・レビュー機能  
+・マイリスト機能  
+ 
+# 工夫した点
+ 
+工夫した点は大きく分けて4点あります。1点目はシンプルなデザインで操作性が高い点です。2点目は豊富な検索条件です。ユーザーはタイトル・著者・大学・学問分野からお目当ての教科書を迅速に探し出すことが可能です。3点目はLINEでログインが可能な点です。多くの大学生はLINEを使用しているため、気軽にアプリを利用することができます。4点目は教科書を受け渡すユーザー間でプロフィールが閲覧できる点です。ユーザーはやりとりを行う前に相手のユーザーネームや出身大学、これまで出品した教科書を見ることができます。また、出品した教科書に対するレビューも見ることができます。
+ 
+# これからの展望
+ 
+マイリストに登録された教科書が出品された際にLINEに通知メッセージが送られる機能を実装する予定です。また、より気軽に使用できるようにiPhone用のアプリとして利用可能にすることも検討しています。
