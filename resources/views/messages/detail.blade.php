@@ -2,7 +2,7 @@
 @section('content')
 <div class="line-bc">
   @foreach( $message_infos as $message_info )
-    @if( !$user_id === $message_info->sender_id )
+    @if( $user_id != $message_info->sender_id )
       <div class="balloon6">
         <div class="faceicon">
           <img src="{{ $message_info->user->image }}">
