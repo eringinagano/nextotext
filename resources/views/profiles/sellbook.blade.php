@@ -20,10 +20,11 @@
           <p class="underline review-content">{{ $textbook->review }}</p>
         @else
           <p class="underline">ステータス：受け取り可能</p>
-          <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success index-btn">詳細</a>
+          <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success detail-btn">詳細</a>
         @endif
       </li>
     </ul>
+    <a href="/profile/{{ Auth::user()->id }}" class="btn btn-outline-secondary profile-btn">プロフィールに戻る</a>
   </div>
 </div>    
 @endsection
