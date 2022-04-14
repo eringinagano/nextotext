@@ -61,4 +61,5 @@ Route::group(['prefix' => 'mylist', 'as' => 'mylist.'], function() {
    Route::get('/', 'MyListController@showMyList')->name('index');
    Route::get('register', 'MyListController@showRegisterForm')->name('register');
    Route::post('register', 'MyListController@addTextbook')->name('register');
+   Route::post('{mylist}/delete', 'MyListController@deleteMylist');
 });

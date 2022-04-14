@@ -8,13 +8,16 @@
         <li class="list-group-item">
           <p>タイトル：{{ $mylist->textbook_name }}</p>
           <p>著者：{{ $mylist->author_name }}</p>
-          <a href="" class="btn btn-outline-danger delete-btn">削除</a>
+          <form action="/mylist/{{ $mylist->id }}/delete" method="POST">
+            @csrf
+            <input type="submit" class="btn btn-outline-danger delete-btn" value="削除"></a>
+          </form>
         </li>
       @endforeach
     </ul>
   </div>
     <div class="btn-wrapper">
-      <a href="{{ route('mylist.register') }}" class="btn btn-outline-success mylist-btng">マイリスト追加</a>
+      <a href="{{ route('mylist.register') }}" class="btn btn-outline-success mylist-btn">マイリスト追加</a>
     </div>
 </div>
 @endsection
