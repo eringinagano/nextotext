@@ -36,4 +36,10 @@ class MyListController extends Controller
         
         return redirect(route('mylist.index'));
     }
+    
+    public function deleteMylist(MyList $mylist) {
+        $mylist->delete();
+        
+        return redirect(route('mylist.index'));
+    }
 }
