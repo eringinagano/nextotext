@@ -21,8 +21,8 @@
             <dd>
               <div class="form-group">
                 <div class="custom-file">
-                  <input type="file" class="custom-file-input" id="inputFile" name="image">
-                  <label class="custom-file-label" for="inputFile" data-browse="参照">ファイルを選択</label>
+                  <input type="file" oninput="inputChange()" class="custom-file-input" id="inputFile" name="image">
+                  <label class="custom-file-label" for="inputFile" data-browse="参照" id="fileName"></label>
                 </div>
               </div>
               @error('image')
@@ -96,19 +96,4 @@
         </div>
     </form>    
 </div>
-<script type="text/javascript">
-  
-  window.onload = function () {
-      
-    let today = new Date();  
-    today.setDate(today.getDate());
-    let yyyy = today.getFullYear();
-    let mm = ("0" + (today.getMonth() + 1)).slice(-2);
-    let dd = ("0" + today.getDate()).slice(-2);
-    
-    document.getElementById("today").value = yyyy + '-' + mm + '-' + dd;
-    
-  }
-  
-</script>
 @endsection
