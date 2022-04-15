@@ -29,7 +29,7 @@
               <input class="form-control chat-form" name="message">
             </li>
             <li>
-              <input type="submit" value="送信" class="btn btn-success">
+              <input type="submit" value="送信" class="btn btn-success" id="submit-btn">
             </li>
         </ul>
       </div>
