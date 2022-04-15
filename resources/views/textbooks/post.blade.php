@@ -21,7 +21,7 @@
             <dd>
               <div class="form-group">
                 <div class="custom-file">
-                  <input type="file" oninput="inputChange()" class="custom-file-input" id="inputFile" name="image">
+                  <input type="file" oninput="inputChange()" class="custom-file-input" id="inputFile" name="image" accept="image/*">
                   <label class="custom-file-label" for="inputFile" data-browse="参照" id="fileName"></label>
                 </div>
               </div>
