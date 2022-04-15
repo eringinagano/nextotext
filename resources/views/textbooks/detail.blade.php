@@ -19,21 +19,21 @@
             @if( $favorite )
               <form action="/textbook/{{ $textbook->id }}/remove" method="POST">
                 @csrf
-                <input type="submit" class="btn btn-outline-primary detail-btn" value="お気に入りから削除"></a>
+                <input type="submit" class="btn btn-outline-primary detail-btn" value="お気に入りから削除">
               </form>
-            @else  
+            @else
               <form action="/textbook/{{ $textbook->id }}/favorite" method="POST">
                 @csrf
-                <input type="submit" class="btn btn-outline-primary detail-btn" value="お気に入りに登録"></a>
+                <input type="submit" class="btn btn-outline-primary detail-btn" value="お気に入りに登録">
               </form>
             @endif
             @if( $reservation )
               <form action="/textbook/{{ $textbook->id }}/chat" method="GET">
-                <input type="submit" class="btn btn-outline-success detail-btn" value="予約する"></input>
+                <input type="submit" class="btn btn-outline-success detail-btn" value="予約する">
               </form>
             @else
               <form action="/textbook/{{ $textbook->id }}/chat" method="GET">
-                <input type="submit" class="btn btn-outline-success detail-btn" value="受け取る"></input>
+                <input type="submit" class="btn btn-outline-success detail-btn" value="受け取る">
               </form>
             @endif
           </li>
