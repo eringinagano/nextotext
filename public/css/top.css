@@ -55,6 +55,36 @@
     letter-spacing: 2px;
 }
 
+.guide-wrapper {
+    padding-top: 70px;
+    text-align: center;
+    margin: 0 auto;
+    width: 72%;
+}
+
+.guide-title {
+     font-family:'Fredoka', sans-serif;
+     font-size: 50px;
+     margin-bottom: 70px;
+     font-weight: bold;
+}
+
+.guide-wrapper p {
+    font-size: 20px;
+    line-height: 2;
+    margin-bottom: 15px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.guide-btn {
+    padding: 10px 30px;
+    border-radius: 30px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
 @media screen and (max-width: 479px) {
     .nav-item .btn {
         padding: 2px 25px;
@@ -81,6 +111,28 @@
     }
     
     .about-btn {
+        padding: 6px 26px;
+        border-radius: 15px;
+        margin-bottom: 40px;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+    
+    .guide-wrapper {
+        width: 85%;
+    }
+    
+    .guide-title {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+    
+    .guide-wrapper p {
+        font-size: 10px;
+        margin-bottom: 6px;
+    }
+    
+    .guide-btn {
         padding: 6px 26px;
         border-radius: 15px;
         margin-bottom: 40px;
