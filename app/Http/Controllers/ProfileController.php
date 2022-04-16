@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
-    //
+    // プロフィールの表示
     public function showProfile($id) {
         $user = User::getProfileUser($id);
         
