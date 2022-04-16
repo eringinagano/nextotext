@@ -52,9 +52,8 @@ class TextbookController extends Controller
     }
     
     public function showTextbookDetail(Textbook $textbook) {
-        $user_id = Auth::id();
-        $user_infos = User::find($user_id);
-        $textbook_id =$textbook->id;
+        $user_infos = Auth::user();
+        $textbook_id = $textbook->id;
         $favorite = $textbook->isFavorite($user_infos, $textbook_id);
         
         $now = new Carbon();

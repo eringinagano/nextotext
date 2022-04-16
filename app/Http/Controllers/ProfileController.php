@@ -42,6 +42,6 @@ class ProfileController extends Controller
         $textbook = Textbook::where('id', $id)->first();
         $sold_textbook = $textbook->checkBook();
         
-        return view('/profiles/sellbook')->with([ 'textbook' => $textbook, 'sold_textbook' => $sold_textbook ]);
+        return view('/profiles/sellbook')->with(['textbook' => $textbook, 'sold_textbook' => $sold_textbook]);
     }
 }
