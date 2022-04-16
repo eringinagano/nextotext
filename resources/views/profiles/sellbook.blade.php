@@ -14,13 +14,13 @@
         <p class="large">{{ $textbook->author_name }}</p>
         <p class="underline">カテゴリー：{{ $textbook->category->name }}</p>
         <p class="underline">使用された大学：{{ $textbook->sellBook->university_name}}</p>
-        @if( $sold_textbook )
+        @if( !$sold_textbook )
+          <p class="underline">ステータス：受け取り可能</p>
+          <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success detail-btn">詳細</a>
+        @else
           <p class="underline">ステータス：出品済み</p>
           <p class="review-title">受け取った学生からのレビュー</p>
           <p class="underline review-content">{{ $textbook->review }}</p>
-        @else
-          <p class="underline">ステータス：受け取り可能</p>
-          <a href="/textbook/{{ $textbook->id }}" class="btn btn-outline-success detail-btn">詳細</a>
         @endif
       </li>
     </ul>
