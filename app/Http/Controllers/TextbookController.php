@@ -52,9 +52,18 @@ class TextbookController extends Controller
     }
     
     public function showTextbookDetail(Textbook $textbook) {
-        $user_infos = Auth::user();
-        $textbook_id = $textbook->id;
-        $favorite = $textbook->isFavorite($user_infos, $textbook_id);
+        $user_id = Auth::id();
+        $user_infos = User::find($user_id);
+        $textbook_id =$textbook->id;
+
+        foreach($user_infos->favoriteTextbooks as $user_info) {
+          if($user_info['id'] === $textbook_id) {
+            $favorite = true;
+              break;
+          } else {
+            $favorite = false;
+          }
+        }
         
         $now = new Carbon();
         $startdate = new Carbon($textbook->date_time);
