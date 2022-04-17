@@ -55,7 +55,8 @@ class TextbookController extends Controller
         $user_id = Auth::id();
         $user_infos = User::find($user_id);
         $textbook_id =$textbook->id;
-
+        $favorite = false;
+        
         foreach($user_infos->favoriteTextbooks as $user_info) {
           if($user_info['id'] === $textbook_id) {
             $favorite = true;
