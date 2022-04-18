@@ -8,6 +8,24 @@
   background: white;
 }
 
+.error-wrapper {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%)
+               translateY(-50%);
+}
+
+.error-wrapper li {
+    list-style: none;
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
 
 .balloon6 {
   width: 100%;
@@ -126,5 +144,13 @@
     
     .input-wrapper .message .chat-form {
         width: 240px;
+    }
+    
+    .error-wrapper {
+      top: 80px;
+    }
+    
+    .error-wrapper li {
+      font-size: 8px;
     }
 }

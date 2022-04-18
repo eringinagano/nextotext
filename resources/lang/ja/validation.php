@@ -152,6 +152,7 @@ return [
         'image' => '画像ファイル',
         'name' => 'タイトル',
         'author_name' => '著者名',
+        'message' => 'メッセージ',
         ],
 
 ];

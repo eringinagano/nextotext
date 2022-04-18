@@ -6,6 +6,7 @@ use App\Message;
 use App\Group;
 use App\Textbook;
 use Illuminate\Http\Request;
+use App\Http\Requests\MessageRequest;
 use Illuminate\Support\Facades\Auth;
 
 class MessageController extends Controller
@@ -33,7 +34,7 @@ class MessageController extends Controller
         return view('messages/detail')->with(['group' => $group, 'user_id' => $user_id, 'message_infos' => $message_infos]);
     }
     
-    public function postMessage(Request $request, Group $group, Message $message) {
+    public function postMessage(MessageRequest $request, Group $group, Message $message) {
         $group_id = $group->id;
         $user_id = Auth::id();
         $message_content = $request['message'];

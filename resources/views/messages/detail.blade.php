@@ -20,6 +20,11 @@
     @endif
   @endforeach 
 </div>
+<div class="error-wrapper">
+    @error('message')
+　　  <li>{{$message}}</li>
+    @enderror
+  </div>
 <div class="input-wrapper">
     <form action="/message/{{ $group->id }}/detail" method="POST">
     @csrf
