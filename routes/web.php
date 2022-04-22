@@ -45,6 +45,7 @@ Route::group(['prefix' => 'textbook', 'as' => 'textbook.'], function() {
     Route::post('post', 'TextbookController@postTextbookForm')->name('post');
     Route::post('category', 'TextbookController@checkCategory')->name('category');
     Route::post('search', 'TextbookController@searchWord')->name('search');
+    Route::post('{textbook}/delete', 'TextbookController@deleteTextbook')->name('delete');
     Route::post('{textbook}/favorite', 'TextbookController@addFavoriteTextbook')->name('favorite');
     Route::post('{textbook}/remove', 'TextbookController@removeFavoriteTextbook')->name('remove');
 });

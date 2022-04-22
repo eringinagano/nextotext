@@ -70,7 +70,16 @@ class TextbookController extends Controller
         $startdate = new Carbon($textbook->date_time);
         $reservation = $textbook->checkReservation($now, $startdate);
         
-        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation]);
+        return view('textbooks/detail')->with(['textbook' => $textbook, 'favorite' => $favorite, 'reservation' => $reservation, 'user_id' => $user_id]);
+    }
+    
+    public function deleteTextbook(Textbook $textbook) {
+        $user = Auth::user();
+        $user->favoriteTextbooks()->detach($textbook->id);
+        
+        $textbook->delete();
+        
+        return redirect(route('textbook.index'));
     }
     
     public function addFavoriteTextbook(Textbook $textbook) {
